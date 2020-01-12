@@ -1,18 +1,22 @@
 .header {
     height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba($color-white, 0.4), rgba($color-white, 0.4)), url(../images/img-1.jpg);
+    // width: 100%;
+    background-image: linear-gradient(rgba($color-white, 0.2), rgba($color-white, 0.2)), url(../images/img-1.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
 
     &__text-box {
         position: absolute;
-        top: 17%;
+        top: 20%;
         left: 10%;
-        width: 50%;
+        width: 30%;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
+            width: 50%;
+        }
+
+        @include respond(tab-port) {
             width: 80%;
         }
     }

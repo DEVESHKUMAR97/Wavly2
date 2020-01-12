@@ -197,6 +197,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 75em) {
@@ -287,9 +288,8 @@ body {
 
 .header {
   height: 100vh;
-  width: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.4)), to(rgba(255, 255, 255, 0.4))), url(../images/img-1.jpg);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../images/img-1.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.2))), url(../images/img-1.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(../images/img-1.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -297,12 +297,18 @@ body {
 
 .header__text-box {
   position: absolute;
-  top: 17%;
+  top: 20%;
   left: 10%;
-  width: 50%;
+  width: 30%;
 }
 
-@media (max-width: 37.5em) {
+@media (max-width: 56.25em) {
+  .header__text-box {
+    width: 50%;
+  }
+}
+
+@media (max-width: 56.25em) {
   .header__text-box {
     width: 80%;
   }
@@ -399,6 +405,14 @@ body {
   text-transform: uppercase;
   background-color: transparent;
   overflow: hidden;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.navigation__nav.scrolled-nav {
+  background-color: #113448;
+  height: 6rem;
+  line-height: 6rem;
 }
 
 .navigation__logo-box {
@@ -406,6 +420,13 @@ body {
   width: 10rem;
   position: absolute;
   left: 10%;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.navigation__logo-box.scrolled-logo-box {
+  -webkit-transform: translateY(-2rem) scale(0.5);
+          transform: translateY(-2rem) scale(0.5);
 }
 
 .navigation__logo {
@@ -414,6 +435,8 @@ body {
 
 .navigation__logo-img {
   width: 100%;
+  padding: 1.5rem;
+  padding-left: 0;
 }
 
 .navigation__list {

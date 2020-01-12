@@ -72,6 +72,14 @@
         background-color: transparent;
         // box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
         overflow: hidden;
+        transition: all .2s ease;
+
+        // scrolling navigation effect 
+        &.scrolled-nav {   
+            background-color: #113448;// mediumpurple;
+            height: 6rem;
+            line-height: 6rem;
+        }
     }
     
     &__logo-box {
@@ -79,6 +87,11 @@
         width: $nav-height;
         position: absolute;
         left: 10%;
+        transition: all .2s ease;
+
+        &.scrolled-logo-box {
+            transform: translateY(-2rem) scale(.5);
+        }
     }
 
     &__logo {
@@ -87,6 +100,8 @@
 
     &__logo-img {
         width: 100%;
+        padding: 1.5rem;
+        padding-left: 0;
     }
 
     &__list {
