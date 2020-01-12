@@ -8,7 +8,7 @@ body{
 
 .heading-primary {
     backface-visibility: hidden;
-    
+
     &--main {
         text-transform: uppercase;
         font-size: 6rem;
@@ -22,6 +22,10 @@ body{
         margin-bottom: .1rem;
         text-shadow: 0 .7rem 4rem rgb(0, 0, 0);
         animation: moveInLeft 1s ease-out .1s 1;
+
+        @include respond(tab-port) {
+            animation: moveInLeftSmall 1s ease-out .1s 1;;
+        }
     }
 
     &--sub {
@@ -33,5 +37,9 @@ body{
         background-clip: text;
         color: transparent;
         animation: moveInRight 1s ease-out .1s 1;
+
+        @include respond(tab-port) {
+            animation: moveInRightSmall 1s ease-out .1s 1;;
+        }
     }
 }

@@ -1,3 +1,4 @@
+// primary heading
 @keyframes moveInLeft{
     0%{
         transform: translateX(-10rem);
@@ -22,6 +23,57 @@
     }
     100%{
         transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes moveInLeftSmall{
+    0%{
+        transform: translateX(-5rem);
+        opacity: 0;
+    }
+    80%{
+        transform: translateX(1rem);
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes moveInRightSmall{
+    0%{
+        transform: translateX(5rem);
+        opacity: 0;
+    }
+    80%{
+        transform: translateX(-1rem);
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+// navigation section
+@keyframes up {
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes down {
+    from{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
         opacity: 1;
     }
 }
