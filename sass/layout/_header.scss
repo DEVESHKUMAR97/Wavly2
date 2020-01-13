@@ -1,9 +1,9 @@
 .header {
     height: 100vh;
     // width: 100%;
-    background-image: linear-gradient(rgba($color-white, 0.2), rgba($color-white, 0.2)), url(../images/img-1.jpg);
+    background-image: linear-gradient(rgba($color-white, 0.1), rgba($color-white, 0.1)), url(../images/img-1.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: top;
     position: relative;
 
     &__text-box {

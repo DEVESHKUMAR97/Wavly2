@@ -2,6 +2,12 @@
     position: fixed;
     width: 100%;
     z-index: 10;
+
+    @include respond(tab-port) {
+        perspective: 75rem;
+        overflow: hidden;
+    }
+
     &__overlay {
         width: 100%;
         height: 100vh;
@@ -9,7 +15,14 @@
         position: fixed;
         transform: scaleX(0);
         opacity: 0;
-        transition: opacity 1s;    
+        transition: opacity 1s;  
+        
+        &.open {
+            @include respond(tab-port) {
+                opacity: 1;
+                transform: scaleX(1);
+            }
+        }
     }
 
     &__menu {
@@ -22,6 +35,10 @@
         border-radius: 3px;
         cursor: pointer;
         display: none;
+
+        @include respond(tab-port) {
+            display: block;
+        }
     }
     
     &__bar {
@@ -63,9 +80,9 @@
     }
 
     &__nav {
-        height: $nav-height;
+        height: $nav-height-big;
         width: 100%;
-        line-height: $nav-height;
+        line-height: $nav-height-big;
         display: flex;
         justify-content: space-evenly;
         text-transform: uppercase;
@@ -77,20 +94,49 @@
         // scrolling navigation effect 
         &.scrolled-nav {   
             background-color: #113448;// mediumpurple;
-            height: 6rem;
-            line-height: 6rem;
+            height: $nav-height-small;
+            line-height: $nav-height-small;
+        }
+
+        @include respond(tab-port) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30rem;
+            height: 100vh;
+            line-height: initial;
+            flex-direction: column;
+            box-shadow: none;
+            text-align: center;
+            transform: rotateY(180deg);
+            transform-origin: top left;
+            transition: transform 650ms cubic-bezier(.55,.55,.675,.19);
+        }
+
+        &.open {
+            @include respond(tab-port) {
+                transform: rotateY(0);
+            }
         }
     }
     
     &__logo-box {
-        height: $nav-height;
-        width: $nav-height;
+        height: $nav-height-big;
+        width: $nav-height-big;
         position: absolute;
         left: 10%;
         transition: all .2s ease;
 
         &.scrolled-logo-box {
             transform: translateY(-2rem) scale(.5);
+        }
+
+        // media query
+        @include respond(tab-port) {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 
@@ -108,6 +154,11 @@
         display: flex;
         list-style: none;
         // justify-content: space-between;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            margin-top: -5rem;
+        }
     }
 
     &__item {
@@ -118,6 +169,13 @@
         &:nth-child(even) {
             animation: down 1s forwards;
         }
+
+        &::nth-child(n) {
+            @include respond(tab-port) {
+                animation: initial;
+            }
+        }
+        
     }
 
     &__link {
@@ -133,11 +191,21 @@
             transform-style: preserve-3d;
             transform-origin: top;
             transition: transform .3s cubic-bezier(.55,.55,.675,.19);
+
+            @include respond(tab-port) {
+                margin: 2rem 0;
+                transform: initial;
+            }
         }
         
 
         &:hover, &:active {
             transform: rotateX(90deg);
+
+            @include respond(tab-port) {
+                transform: initial;
+                color: blue;
+            }
         }
 
         &::after {
@@ -154,5 +222,6 @@
         }
     
     }
+
     
 }

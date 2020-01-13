@@ -17,6 +17,13 @@ $color-primary-5 : #1F267E;
 
 $color-secondary: red;
 
+$color-grey-light-1 : #f7f7f7;
+$color-grey-light-2 : #eee;
+
+$color-grey-dark : #777;
+$color-grey-dark-2 : #999;
+$color-grey-dark-3 : #333;
+
 
 $color-white : #fff;
 $color-black : #000;
@@ -25,4 +32,5 @@ $color-black : #000;
 $default-font-size : 1.6rem;
 
 // navigation
-$nav-height : 10rem; // same as logo height and width
+$nav-height-big : 10rem; // same as logo height and width
+$nav-height-small : 6rem;
