@@ -1,0 +1,23 @@
+.support-box {
+    width: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    height: fit-content;
+    margin: 0 auto;
+    margin-top: 4rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+    transition: all .2s;
+    // outline-offset: 1rem;
+    -moz-outline-radius: 50%;
+
+    &__img {
+        width: 100%;   
+    }
+
+    &:hover {
+        transform: scale(1.1) translateY(-.1rem);
+        box-shadow: 0 2rem 4rem rgba($color-black, .5);
+        // outline: 1rem solid $color-primary-5;
+
+    }
+}

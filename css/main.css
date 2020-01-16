@@ -290,8 +290,8 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: -webkit-gradient(linear, left top, right top, from(#64B0FC), to(#1F267E));
-  background-image: linear-gradient(to right, #64B0FC, #1F267E);
+  background-image: -webkit-gradient(linear, left top, right top, from(#f64c72), to(#f64c72));
+  background-image: linear-gradient(to right, #f64c72, #f64c72);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -325,7 +325,7 @@ body {
 }
 
 .paragraph {
-  font-size: 1.6rem;
+  font-size: calc(1.6rem * 1.2);
 }
 
 .paragraph:not(:last-child) {
@@ -366,6 +366,33 @@ body {
 
 .u-margin-top-huge {
   margin-top: 10rem !important;
+}
+
+.support-box {
+  width: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  margin-top: 4rem;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  -moz-outline-radius: 50%;
+}
+
+.support-box__img {
+  width: 100%;
+}
+
+.support-box:hover {
+  -webkit-transform: scale(1.1) translateY(-0.1rem);
+          transform: scale(1.1) translateY(-0.1rem);
+  -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5);
 }
 
 .header {
@@ -681,7 +708,6 @@ body {
 
 .section-about {
   padding: 10rem 0;
-  background-color: #f7f7f7;
-  height: 100vh;
+  background-color: #5cdb95;
 }
 /*# sourceMappingURL=main.css.map */
