@@ -15,9 +15,12 @@ $color-primary-4 : #304A9E;
 $color-primary-5 : #1F267E;
 
 
-// $color-secondary : #55c57a;
-// $color-secondary-light : #7ed56f;
-// $color-secondary-dark : #28b485;
+$color-primary : #6E70C2;
+$color-primary-light : #674EA9;
+$color-primary-dark : #312A5C;
+$color-secondary : #55c57a;
+$color-secondary-light : #7ed56f;
+$color-secondary-dark : #28b485;
 $color-secondary: #5cdb95;
 
 $color-tertiary-light: #f64c72;
@@ -40,3 +43,8 @@ $default-font-size : 1.6rem;
 // navigation
 $nav-height-big : 10rem; // same as logo height and width
 $nav-height-small : 6rem;
+
+// length
+$card-height: 35rem;
+$back-side-height: calc(#{$card-height} * 2 / 3);
+$card-shift: calc(#{$back-side-height} / 2);
