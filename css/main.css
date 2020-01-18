@@ -227,6 +227,7 @@ html {
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: relative;
 }
 
 body {
@@ -376,33 +377,6 @@ body {
 
 .u-margin-top-huge {
   margin-top: 10rem !important;
-}
-
-.support-box {
-  width: 50%;
-  border-radius: 50%;
-  overflow: hidden;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin: 0 auto;
-  margin-top: 4rem;
-  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-  -webkit-transition: all .2s;
-  transition: all .2s;
-  -moz-outline-radius: 50%;
-}
-
-.support-box__img {
-  width: 100%;
-}
-
-.support-box:hover {
-  -webkit-transform: scale(1.1) translateY(-0.1rem);
-          transform: scale(1.1) translateY(-0.1rem);
-  -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5);
-          box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5);
 }
 
 .card {
@@ -566,6 +540,205 @@ body {
 
 .card__button--3:hover, .card__button--3:active {
   color: #553d67;
+}
+
+.form__group:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
+
+.form__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  width: 90%;
+  display: block;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+@media (max-width: 75em) {
+  .form__input {
+    width: 100%;
+  }
+}
+
+.form__input:focus {
+  outline: none;
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #6E70C2;
+}
+
+.form__input:focus:invalid {
+  border-bottom: 3px solid #28b485;
+}
+
+.form__input::-webkit-input-placeholder {
+  color: #999;
+}
+
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-4rem);
+          transform: translateY(-4rem);
+}
+
+.form__radio-group {
+  width: 49%;
+  display: inline-block;
+}
+
+@media (max-width: 56.25em) {
+  .form__radio-group {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+.form__radio-input {
+  display: none;
+}
+
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4.5rem;
+}
+
+.form__radio-button {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 0.5rem solid #6E70C2;
+  position: absolute;
+  left: 0;
+  top: -.4rem;
+}
+
+.form__radio-button::after {
+  content: "";
+  display: block;
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #6E70C2;
+  opacity: 0;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1;
+}
+
+.form__text-area {
+  resize: none;
+}
+
+.form__btn {
+  padding: 1rem 1.5rem;
+  padding-left: 1.7rem;
+  font-size: 1.6rem;
+}
+
+.support-box {
+  width: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  margin-top: 4rem;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  -moz-outline-radius: 50%;
+}
+
+.support-box__img {
+  width: 100%;
+}
+
+.support-box:hover {
+  -webkit-transform: scale(1.1) translateY(-0.1rem);
+          transform: scale(1.1) translateY(-0.1rem);
+  -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+  padding: 10rem 0;
+  padding-bottom: 3rem;
+  background-color: #113448;
+  color: #f7f7f7;
+  font-size: 1.4rem;
+}
+
+.footer__text-box {
+  margin: 0 1.2rem;
+}
+
+.footer__heading {
+  font-size: 1.8rem;
+  color: #f64c72;
+  margin: 2.2rem auto;
+  margin-bottom: 1.8rem;
+}
+
+.footer__list {
+  list-style: none;
+}
+
+.footer__list span {
+  margin-left: 1rem;
+}
+
+.footer__copyright-box {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.footer__link:link, .footer__link:visited {
+  color: #f7f7f7;
+  background-color: #113448;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.footer__link:hover, .footer__link:active {
+  color: #6E70C2;
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  -webkit-transform: rotate(5deg) scale(1.3);
+          transform: rotate(5deg) scale(1.3);
 }
 
 .header {
@@ -888,5 +1061,56 @@ body {
   background-color: #f7f7f7;
   padding: 10rem  0;
   padding-bottom: 15rem;
+}
+
+.section-contact {
+  padding: 10rem 0;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#674EA9), to(#312A5C));
+  background-image: linear-gradient(to right bottom, #674EA9, #312A5C);
+}
+
+@media (max-width: 56.25em) {
+  .section-contact {
+    padding: 5rem 0;
+  }
+}
+
+.contact {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 50%, transparent 50%), url(../images/water.jpg);
+  background-size: 100%;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 75em) {
+  .contact {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 65%, transparent 65%), url(../images/water.jpg);
+    background-size: cover;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .contact {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.6))), url(../images/water.jpg);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), url(../images/water.jpg);
+  }
+}
+
+.contact__form {
+  width: 50%;
+  padding: 6rem;
+}
+
+@media (max-width: 75em) {
+  .contact__form {
+    width: 65%;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .contact__form {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
