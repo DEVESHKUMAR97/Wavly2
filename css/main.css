@@ -379,6 +379,83 @@ body {
   margin-top: 10rem !important;
 }
 
+.accordion__item {
+  background-color: #283042;
+  border-radius: .4rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  -webkit-box-shadow: 0.5rem 2px 0.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0.5rem 2px 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.accordion__link {
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  background-color: #283042;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+.accordion__icon {
+  color: #e7d5ff;
+  padding: .5rem;
+}
+
+.accordion__icon--minus {
+  display: none !important;
+}
+
+.accordion__answer-box {
+  max-height: 20rem;
+  display: none;
+  overflow: hidden;
+  position: relative;
+  background-color: #212838;
+  -webkit-transition: max-height 650ms;
+  transition: max-height 650ms;
+}
+
+.accordion__answer-box::before {
+  content: "";
+  position: absolute;
+  width: .6rem;
+  height: 90%;
+  background-color: #8fc460;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.accordion__answer {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.4rem;
+  padding: 2rem;
+}
+
+.accordion__item.active .accordion__answer-box {
+  display: block;
+}
+
+.accordion__item.active .accordion__icon--plus {
+  display: none;
+}
+
+.accordion__item.active .accordion__icon--minus {
+  display: block !important;
+}
+
 .card {
   position: relative;
   height: 35rem;
@@ -559,6 +636,8 @@ body {
   border-bottom: 3px solid transparent;
   -webkit-transition: all .3s;
   transition: all .3s;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
 }
 
 @media (max-width: 75em) {
@@ -580,6 +659,15 @@ body {
 
 .form__input::-webkit-input-placeholder {
   color: #999;
+}
+
+.form__input::-webkit-outer-spin-button, .form__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form__input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .form__label {
@@ -1112,5 +1200,31 @@ body {
   .contact__form {
     width: 100%;
   }
+}
+
+.partner-background {
+  background-color: #8ee4af;
+}
+
+.section-partner-heading {
+  padding: 12rem 0;
+  padding-bottom: 0;
+}
+
+.section-partner-form {
+  padding-bottom: 5rem;
+}
+
+.section-accordion {
+  width: 100%;
+  background-color: #edc7b7;
+  padding: 10rem 0;
+}
+
+.accordion-container {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 /*# sourceMappingURL=main.css.map */
