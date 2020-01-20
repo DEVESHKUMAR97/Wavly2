@@ -1,0 +1,18 @@
+.product-content {
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        font-size: 1.8rem;
+        display: flex;
+    }
+
+    &__icon {
+        display: inline-block;
+    }
+
+    &__text {
+        margin-left: 3.5rem;
+    }
+}
