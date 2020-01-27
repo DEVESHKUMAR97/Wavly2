@@ -27,8 +27,11 @@
 
     <!-- Favicon  -->
     <link rel="icon" href="images/logo-new.png">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/09f43d938a.js" crossorigin="anonymous"></script>
 </head>
-<body data-spy="scroll" data-target=".navigation" data-offset="100">
+<body data-spy="scroll" data-target=".navigation__nav" data-offset="100">
 
     <!-- navigation -->
     <!-- <div class="navigation__gate"> -->
@@ -48,7 +51,7 @@
                 <li class="navigation__item"><a href="#about" class="navigation__link" data-text="about">about</a></li>
                 <li class="navigation__item"><a href="#products" class="navigation__link" data-text="products">products</a></li>
                 <li class="navigation__item"><a href="#contact" class="navigation__link" data-text="contact us">contact us</a></li>
-                <li class="navigation__item"><a href="#partner" class="navigation__link" data-text="become partner">become partner</a></li>
+                <li class="navigation__item"><a href="partner.html" target="_blank" class="navigation__link" data-text="become partner">become partner</a></li>
             </ul>
         </nav>
     </div>
@@ -122,7 +125,197 @@
             </div>
 
         </section>
+
+        <section class="section-products" id="products">
+
+            <div class="container">
+
+                <div class="u-center-text u-margin-bottom-huge">
+                    <h2 class="heading-secondary">
+                        Products
+                    </h2>
+                </div> 
+
+                <div class="row">
+
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--1">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--1">Wavly AutoCut</span>
+                                </h4>
+                            </div>
+
+                            <div class="card__side card__side--back card__side--back--1">
+                                <div class="card__details">
+                                    <p class="card__paragraph">
+                                        Manual switch ON of water pump by user and automatic switch OFF Wavly Autocut.
+                                    </p>
+                                </div>
+                                <div class="card__button-section">
+                                    <a href="autocut.html" target="_blank" class="card__button card__button--1">Know More</a>
+                                    <a href="autocut.html" target="_blank" class="card__button card__button--1">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--2">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--2">Wavly Submersible</span>
+                                </h4>
+                            </div>
+
+                            <div class="card__side card__side--back card__side--back--2">
+                                <div class="card__details">
+                                    <p class="card__paragraph">
+                                        Automatic Switch ON and OFF of submersible according to water level in overhead tank(ONLY FOR SUBMERSIBLE).
+                                    </p>
+                                </div>
+                                <div class="card__button-section">
+                                    <a href="submersible.html" target="_blank" class="card__button card__button--2">Know More</a>
+                                    <a href="submersible.html" target="_blank" class="card__button card__button--2">Buy Now</a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--3">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--3">Wavly X</span>
+                                </h4>
+                            </div>
+
+                            <div class="card__side card__side--back card__side--back--3">
+                                <div class="card__details">
+                                    <p class="card__paragraph">
+                                        Water Management platform to automate and save water in big infrastructure like malls ,residential societies , sports complex etc. 
+                                    </p>
+                                </div>
+                                <div class="card__button-section">
+                                    <a href="wavlyx.html" target="_blank" class="card__button card__button--3">Know More</a>
+                                    <a href="wavlyx.html" target="_blank" class="card__button card__button--3">Buy Now</a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section-contact" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="contact">
+                            <div class="contact__form">
+                                <form action="#" class="form">
+
+                                    <div class="u-margin-bottom-medium">
+                                        <h2 class="heading-secondary">
+                                            Contact Us
+                                        </h2>
+                                    </div>
+
+                                    <div class="form__group">
+                                        <input type="text" class="form__input" placeholder="Full name*" id="name" required>
+                                        <label for="name" class="form__label">Full name</label>
+                                    </div>
+
+                                    <div class="form__group">
+                                        <input type="email" class="form__input" placeholder="Email address*" id="email" required>
+                                        <label for="email" class="form__label">Email address</label>
+                                    </div>
+
+                                    <div class="form__group">
+                                        <input type="number" class="form__input" placeholder="Mobile number (optional)" id="mobile">
+                                        <label for="mobile" class="form__label">Mobile number</label>
+                                    </div>
+
+                                    <div class="form__group">
+                                        <!-- <input type="number" class="form__input" placeholder="Your message (optional)" id="mobile" required> -->
+                                        <textarea name="Message" class="form__input form__text-area" placeholder="Your message (optional)" id="message"  rows="4"></textarea>
+                                        <label for="message" class="form__label">Your message</label>
+                                    </div>
+
+                                    <div class="form__group">
+                                        <button class="btn btn-primary btn-lg form__btn">Submit &rarr;</button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footer__text-box">
+                        <h4 class="footer__heading">About Us</h4>
+                        <p>We aim to save water assets using automation, IOT and data analytics in sustainable way.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footer__text-box">
+                        <h4 class="footer__heading">Support</h4 class="footer__heading">
+                        <p>We are supported by American embassy, University of Texas and Delhi govt and has been recognized as top 3000 startups by govt of India, currently DTU IIF incubated.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footer__text-box">
+                        <h4 class="footer__heading">Products</h4 class="footer__heading">
+                        <ul class="footer__list">
+                            <li>Wavly AutoCut</li>
+                            <li>Wavly Submersible</li>
+                            <li>Wavly X</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footer__text-box">
+                        <h4 class="footer__heading">Contact</h4 class="footer__heading">
+                        <ul class="footer__list">
+                            <li><i class="fas fa-envelope">  : </i><span>contact@wavly.in</span></li>
+                            <li><i class="fas fa-phone-alt">  : </i><span>+91-9315080523</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer__copyright-box">
+                        <p class="footer__copyright">Copyright © <a class="footer__link" href="index.html">Walvy</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     
 
 
@@ -130,6 +323,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
