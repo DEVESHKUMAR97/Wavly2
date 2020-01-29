@@ -1,6 +1,7 @@
 .product-content {
     &__list {
         list-style: none;
+        // padding-left: 2rem;
     }
 
     &__item {
@@ -10,9 +11,15 @@
 
     &__icon {
         display: inline-block;
+        font-size: 1.6rem;
     }
 
     &__text {
-        margin-left: 3.5rem;
+        margin-left: 2.5rem;
+    }
+
+    &__image {
+        display: flex;
+        align-items: center;
     }
 }

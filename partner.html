@@ -71,39 +71,124 @@
                 <section class="section-partner-form container" id="contact">
                         <div class="row">
                             <div class="col-12">
-                                <div class="contact">
-                                    <div class="contact__form">
-                                        <form action="#" class="form">
+                                <div class="partner-form-background">
+                                    <div class="partner-form-background__area">
+                                        <form action="#" class="partner-form">
 
                                             <div class="u-margin-bottom-medium">
-                                                <h2 class="heading-secondary">
-                                                    Contact Us
-                                                </h2>
+                                                <h3 class="heading-tertiary u-center-text">
+                                                    just fill out this form
+                                                </h3>
                                             </div>
 
-                                            <div class="form__group">
-                                                <input type="text" class="form__input" placeholder="Full name*" id="name" required>
-                                                <label for="name" class="form__label">Full name</label>
+                                            <div class="partner-form__group">
+                                                <label for="partner-name" class="partner-form__label">Name :</label>
+                                                <input type="text" class="partner-form__input" placeholder="Name*" id="partner-name" name="partner-name" required>
                                             </div>
 
-                                            <div class="form__group">
-                                                <input type="email" class="form__input" placeholder="Email address*" id="email" required>
-                                                <label for="email" class="form__label">Email address</label>
+                                            <fieldset class="partner-form__group u-margin-bottom-medium">
+                                                <legend class="partner-form__legend">What you do? :</legend>
+                                                <div class="partner-form__radio-group">
+                                                    <input type="radio" class="partner-form__radio-input" id="retailer" value="retailer" name="choice">
+                                                    <label for="retailer" class="partner-form__radio-label">
+                                                        <span class="partner-form__radio-button"></span>
+                                                        Retailer
+                                                    </label>
+                                                </div>
+            
+                                                <div class="partner-form__radio-group">
+                                                    <input type="radio" class="partner-form__radio-input" id="distributor" value="distributor" name="choice">
+                                                    <label for="distributor" class="partner-form__radio-label">
+                                                        <span class="partner-form__radio-button"></span>
+                                                        Distributor
+                                                    </label>
+                                                </div>
+                                            </fieldset>
+
+                                            <div class="partner-form__group">
+                                                <label for="company-name" class="partner-form__label">Company/Firm Name :</label>
+                                                <input type="text" class="partner-form__input" placeholder="Company/Firm Name" id="company-name" name="company-name" required>
                                             </div>
 
-                                            <div class="form__group">
-                                                <input type="number" class="form__input" placeholder="Mobile number (optional)" id="mobile">
-                                                <label for="mobile" class="form__label">Mobile number</label>
+                                            <div class="partner-form__group">
+                                                <label for="partner-mobile" class="partner-form__label">Mobile/Contact number :</label>
+                                                <input type="number" class="partner-form__input" placeholder="Mobile/Contact number" id="partner-mobile">
+                                            </div>  
+
+                                            <div class="partner-form__group">
+                                                <label for="partner-email" class="partner-form__label">Email :</label>
+                                                <input type="email" class="partner-form__input" placeholder="Email" id="partner-email" name="partner-email" required>
                                             </div>
 
-                                            <div class="form__group">
-                                                <!-- <input type="number" class="form__input" placeholder="Your message (optional)" id="mobile" required> -->
-                                                <textarea name="Message" class="form__input form__text-area" placeholder="Your message (optional)" id="message"  rows="4"></textarea>
-                                                <label for="message" class="form__label">Your message</label>
+                                            <div class="partner-form__group">
+                                                <label for="web-name" class="partner-form__label">Website :</label>
+                                                <input type="text" class="partner-form__input" placeholder="Website" id="web-name" name="web-name" required>
                                             </div>
 
-                                            <div class="form__group">
-                                                <button class="btn btn-primary btn-lg form__btn">Submit &rarr;</button>
+                                            <div class="partner-form__group">
+                                                <label for="gst-number" class="partner-form__label">GST Number :</label>
+                                                <input type="number" class="partner-form__input" placeholder="GST Number" id="gst-number" name="gst-number" required>
+                                            </div>
+
+                                            <fieldset class="partner-form__group u-margin-bottom-medium">
+                                                <legend>If owns shop?</legend>
+                                                <div class="partner-form__radio-group">
+                                                    <input type="radio" class="partner-form__radio-input" id="owner-yes" value="yes" name="owner">
+                                                    <label for="owner-yes" class="partner-form__radio-label">
+                                                        <span class="partner-form__radio-button"></span>
+                                                        Yes
+                                                    </label>
+                                                </div>
+            
+                                                <div class="partner-form__radio-group">
+                                                    <input type="radio" class="partner-form__radio-input" id="owner-no" value="no" name="owner">
+                                                    <label for="owner-no" class="partner-form__radio-label">
+                                                        <span class="partner-form__radio-button"></span>
+                                                        No
+                                                    </label>
+                                                </div>
+                                            </fieldset>
+
+                                            <fieldset class="partner-form__group u-margin-bottom-medium">
+                                                <legend>Products interested in? :</legend>
+                                                <div class="partner-form__checkbox-group">
+                                                    <input type="checkbox" class="partner-form__checkbox-input" id="wavlyautocut" value="wavlyautocut" name="interested">
+                                                    <label for="wavlyautocut" class="partner-form__checkbox-label">
+                                                        <span class="partner-form__checkbox-button"></span>
+                                                        Wavly AutoCut
+                                                    </label>
+                                                </div>
+            
+                                                <div class="partner-form__checkbox-group">
+                                                    <input type="checkbox" class="partner-form__checkbox-input" id="wavlysubmersible" value="wavlysubmersible" name="interested">
+                                                    <label for="wavlysubmersible" class="partner-form__checkbox-label">
+                                                        <span class="partner-form__checkbox-button"></span>
+                                                        Wavly Submersible
+                                                    </label>
+                                                </div>
+
+                                                <div class="partner-form__checkbox-group">
+                                                    <input type="checkbox" class="partner-form__checkbox-input" id="wavlyx" value="wavlyx" name="interested">
+                                                    <label for="wavlyx" class="partner-form__checkbox-label">
+                                                        <span class="partner-form__checkbox-button"></span>
+                                                        Wavly X
+                                                    </label>
+                                                </div>
+                                            </fieldset>
+
+                                            <div class="partner-form__group">
+                                                <label for="team-size" class="partner-form__label">Team Size :</label>
+                                                <input type="number" class="partner-form__input" placeholder="Team Size" id="team-size" name="team-size" required>
+                                            </div>
+
+                                            <div class="partner-form__group">
+                                                <!-- <input type="number" class="partner-form__input" placeholder="Your message (optional)" id="mobile" required> -->
+                                                <label for="partner-message" class="partner-form__label">Your message :</label>
+                                                <textarea name="partner-message" class="partner-form__input partner-form__text-area" placeholder="Your message (optional)" id="partner-message"  rows="4"></textarea>
+                                            </div>
+
+                                            <div class="partner-form__group">
+                                                <button class="btn btn-primary btn-lg partner-form__btn">Submit &rarr;</button>
                                             </div>
 
                                         </form>

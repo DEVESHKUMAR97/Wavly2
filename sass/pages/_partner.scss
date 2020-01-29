@@ -11,6 +11,19 @@
     padding-bottom: 5rem;
 }
 
+.partner-form-background {
+    border-radius: 3px;
+    border: 1px solid $color-black;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+
+    &__area {
+        width: 100%;
+        padding: 6rem;
+    }
+}
+
+
+
 .section-accordion {
     width: 100%;
     background-color: #edc7b7;
