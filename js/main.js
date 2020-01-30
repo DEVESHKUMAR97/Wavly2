@@ -17,8 +17,30 @@ selector(".navigation__menu").addEventListener('click', function(){
     this.classList.toggle('navigation__open');
     selector(".navigation").classList.toggle('navigation__open');
     selector(".navigation__overlay").classList.toggle('navigation__open');
+    selector(".navigation__nav").classList.toggle('navigation__open');
+
+
+    // changes
+    var navi = $(".navigation");
+    if(navi.hasClass('navigation__open-for-height')){
+        setTimeout(function() {
+            $(".navigation").removeClass('navigation__open-for-height');
+        }, 650);
+    } else {
+        $(".navigation").addClass('navigation__open-for-height');
+    }
+    
 });
 
+$(window).resize(function(){
+if ($(window).width() < 768) {
+    $('.navigation').addClass('navigation__width-change');
+    setTimeout(function() {
+        $('.navigation').removeClass('navigation__width-change');
+    }, 1000);
+    
+}
+});
 
 
 // accrodion

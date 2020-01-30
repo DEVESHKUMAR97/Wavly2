@@ -2,21 +2,21 @@
     position: fixed;
     width: 100%;
     z-index: 10;
-    // transition: all 2s ease reverse;
     // height: 100vh;
 
     @include respond(tab-port) {
         perspective: 75rem;
         overflow: hidden;
-        // height: 8rem;
+        height: 8rem;
 
-        // &__open.navigation {
-        //     height: 100vh;
-        //     animation-name: gate;
-        //     animation-duration: 3s;
-        //     animation-timing-function: ease;
-        //     animation-fill-mode: forwards;
-        // }
+        &__open-for-height.navigation {
+            height: 100vh;
+        }
+
+        &__width-change.navigation {
+            height: 100vh;
+        }
+        
 
         &__open &__nav{
             @include respond(tab-port) {
@@ -52,6 +52,10 @@
         border-radius: 3px;
         cursor: pointer;
         display: none;
+        height: 6rem;
+        width: 7rem;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+
 
         @include respond(tab-port) {
             display: block;
@@ -113,10 +117,11 @@
             background-color: lightgrey;// mediumpurple;
             height: $nav-height-small;
             line-height: $nav-height-small;
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
         }
 
         @include respond(tab-port) {
-            position: absolute;
+            // position: absolute;
             top: 0;
             left: 0;
             width: 30rem;
@@ -132,7 +137,13 @@
 
             &.scrolled-nav {   
                 height: 100vh;
+                line-height: initial;
             }
+
+            // &.navigation__open {
+            //     display: block
+            // }
+
         }
     }
     
@@ -153,6 +164,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            transform: scale(1.5);
+            position: static;
+
+            &.scrolled-logo-box {
+                transform: scale(1.5);
+            }
         }
     }
 
@@ -211,6 +228,7 @@
             @include respond(tab-port) {
                 margin: 2rem 0;
                 transform: initial;
+                transition: text-shadow .3s cubic-bezier(.55,.55,.675,.19);
             }
         }
         
@@ -220,7 +238,8 @@
 
             @include respond(tab-port) {
                 transform: initial;
-                color: blue;
+                color: $color-white;
+                text-shadow: 0 .2rem .4rem rgba(0,0,0,0.85);
             }
         }
 

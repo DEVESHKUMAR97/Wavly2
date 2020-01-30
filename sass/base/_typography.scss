@@ -11,7 +11,7 @@ body{
 
     &--main {
         text-transform: uppercase;
-        font-size: 6rem;
+        font-size: 7rem;
         font-weight: 700;
         letter-spacing: 2.5rem;
         display: block;
@@ -24,19 +24,20 @@ body{
         animation: moveInLeft 1s ease-out .1s 1;
 
         @include respond(tab-port) {
-            animation: moveInLeftSmall 1s ease-out .1s 1;;
+            animation: moveInLeftSmall 1s ease-out .1s 1;
         }
     }
 
     &--sub {
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: 400;
         display: block;
         background-image: linear-gradient(to right, $color-primary-1, $color-primary-5);
         -webkit-background-clip: text;
         background-clip: text;
-        color: transparent;
+        color: white;
         animation: moveInRight 1s ease-out .1s 1;
+        margin-bottom: 4rem;
 
         @include respond(tab-port) {
             animation: moveInRightSmall 1s ease-out .1s 1;;
