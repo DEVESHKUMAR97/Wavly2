@@ -321,6 +321,16 @@ body {
   .heading-primary--main {
     -webkit-animation: moveInLeftSmall 1s ease-out .1s 1;
             animation: moveInLeftSmall 1s ease-out .1s 1;
+    letter-spacing: 3rem;
+    margin-left: 3rem;
+    text-shadow: 0 0.5rem 3rem black;
+  }
+}
+
+@media (max-width: 36em) {
+  .heading-primary--main {
+    letter-spacing: 1rem;
+    margin-left: 1rem;
   }
 }
 
@@ -345,6 +355,7 @@ body {
   .heading-primary--sub {
     -webkit-animation: moveInRightSmall 1s ease-out .1s 1;
             animation: moveInRightSmall 1s ease-out .1s 1;
+    letter-spacing: .15rem;
   }
 }
 
@@ -577,7 +588,7 @@ body {
 }
 
 .btn--white:hover {
-  color: #426CBE;
+  color: #000;
 }
 
 .btn--white::after {
@@ -961,11 +972,11 @@ body {
   outline: none;
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-  border-bottom: 3px solid #6E70C2;
+  border-bottom: 3px solid #28b485;
 }
 
 .form__input:focus:invalid {
-  border-bottom: 3px solid #28b485;
+  border-bottom: 3px solid #ff7730;
 }
 
 .form__input::-webkit-input-placeholder {
@@ -1325,7 +1336,7 @@ body {
 
 @media (max-width: 36em) {
   .social__link, .social__link:link, .social__link:visited {
-    line-height: 6.4rem;
+    line-height: 6rem;
   }
 }
 
@@ -1595,7 +1606,7 @@ body {
   position: absolute;
   width: 3rem;
   height: 2px;
-  background-color: #426CBE;
+  background-color: #fff;
   top: 0;
   right: 0;
   left: 0;

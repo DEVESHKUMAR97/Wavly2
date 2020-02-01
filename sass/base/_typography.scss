@@ -26,6 +26,14 @@ body{
 
         @include respond(tab-port) {
             animation: moveInLeftSmall 1s ease-out .1s 1;
+            letter-spacing: 3rem;
+            margin-left: 3rem;
+            text-shadow: 0 .5rem 3rem rgb(0, 0, 0);
+        }
+
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            margin-left: 1rem;
         }
     }
 
@@ -45,7 +53,8 @@ body{
         letter-spacing: .25rem;
 
         @include respond(tab-port) {
-            animation: moveInRightSmall 1s ease-out .1s 1;;
+            animation: moveInRightSmall 1s ease-out .1s 1;
+            letter-spacing: .15rem;
         }
     }
 }
