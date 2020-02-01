@@ -1,7 +1,7 @@
 .footer {
     padding: 10rem 0;
     padding-bottom: 3rem;
-    background-color: #113448;
+    background-color: rgba($color-black, 1);
     color: $color-grey-light-1;
     font-size: 1.4rem;
 
@@ -33,7 +33,7 @@
     &__link {
         &:link, &:visited {
             color: $color-grey-light-1;
-            background-color: #113448;
+            background-color: $color-black;
             text-decoration: none;
             text-transform: uppercase;
             display: inline-block;

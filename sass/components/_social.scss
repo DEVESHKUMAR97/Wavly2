@@ -72,6 +72,10 @@
             background-color: $instagram-color;
         }
 
+        &--whatsapp::before {
+            background-color: $whatsapp-color;
+        }
+
         &:hover::before {
             animation: icon-animation .7s 1;
             top: -10%;
@@ -119,6 +123,10 @@
 
         &--instagram {
             color: $instagram-color;
+        }
+
+        &--whatsapp {
+            color: $whatsapp-color;
         }
     }
 

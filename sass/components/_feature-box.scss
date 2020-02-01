@@ -31,7 +31,9 @@
         font-size: 6rem;
         margin-bottom: 1.5rem;
         display: inline-block;
-        background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        background: linear-gradient(to right bottom, rgba($color-black, .6), rgba($color-black, .8));
+        // background-color: rgba($color-black, .8);
+
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -43,5 +45,9 @@
 
     &:hover {
         transform: translateY(-1.5rem) scale(1.03);
+    }
+
+    &__text {
+        font-family: 'Manjari', sans-serif;
     }
 }

@@ -22,8 +22,12 @@
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet"> <!-- google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" href="css/slider.css">
 
     <!-- Favicon  -->
     <link rel="icon" href="images/logo-new.png">
@@ -65,7 +69,7 @@
                 <span class="heading-primary--main">Wavly</span>
                 <span class="heading-primary--sub">A Water technology focused brand, aims to manage water assests of infrastructure via IoT, automation and data analytics.</span>
             </h1>
-            <a href="#products" class="btn btn--white btn--animated">Discover</a>
+            <a href="#products" class="btn btn--white btn--animated btn--header-button">Discover</a>
         </div>
 
     </header>
@@ -74,64 +78,140 @@
 
         <section class="section-features"  id="about">
             <div class="container">
-            <div class="row">
+                <div class="row">
 
-                <div class="col-lg-3 col-sm-6 col-12">
-                    <div class="feature-box">
-                        <i class="feature-box__icon fas fa-cogs"></i>
-                        <h3 class="heading-tertiary u-margin-bottom-small">Automation</h3>
-                        <p class="feature-box__text">
-                            Prevent wastage of water by automating water pumps at small flats, societies etc. using WAVLY products.
-                        </p>
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="feature-box">
+                            <i class="feature-box__icon fas fa-cogs"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Automation</h3>
+                            <p class="feature-box__text">
+                                Prevent wastage of water by automating water pumps at small flats, societies etc. using easily installable WAVLY products.
+                            </p>
+                        </div>
                     </div>
+
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="feature-box">
+                            <i class="feature-box__icon fas fa-wifi"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">IOT & data</h3>
+                            <p class="feature-box__text">
+                                IOT enabled predictive analysis helps in leakage detection, system failure using real time data preventing huge damage.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="feature-box">
+                            <i class="feature-box__icon fas fa-building"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Water management</h3>
+                            <p class="feature-box__text">
+                                For large societies, schools, malls, sports complex etc. an end-to-end solution to automatically manage water in buildings with no upfront cost.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="feature-box">
+                            <i class="feature-box__icon fas fa-dollar-sign"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Savings</h3>
+                            <p class="feature-box__text">
+                                Saving water with saving money at your comfortability. Isn't that great! Saving up to 20% to 26% of money on utility bills per month.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="col-lg-3 col-sm-6 col-12">
-                    <div class="feature-box">
-                        <i class="feature-box__icon fas fa-wifi"></i>
-                        <h3 class="heading-tertiary u-margin-bottom-small">IOT & data</h3>
-                        <p class="feature-box__text">
-                            IOT enabled predictive analysis helps to detect leakage detection, system failure using real time data preventing huge damage.
-                        </p>
+                <h3 class="association">Associated with :</h3>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="support-box">
+                                <img src="images/DTU-IIF2.png" alt="DTU" class="img-responsive support-box__img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="support-box">
+                                <img src="images/nexus.png" alt="nexus" class="img-responsive support-box__img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="support-box">
+                                <img src="images/american.png" alt="american" class="img-responsive support-box__img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="support-box">
+                                <img src="images/smart-fifty.png" alt="smart-fifty" class="img-responsive support-box__img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="support-box">
+                                <img src="images/innotechnew.png" alt="innotech" class="img-responsive support-box__img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="support-box">
+                                <img src="images/texas2.png" alt="texas2" class="img-responsive support-box__img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="support-box">
+                                <img src="images/oyo.png" alt="texas2" class="img-responsive support-box__img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="support-box">
+                                <img src="images/delhigov.png" alt="texas2" class="img-responsive support-box__img">
+                            </div>
+                        </div>
                     </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <!-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
                 </div>
+                <!-- Swiper JS -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 
-                <div class="col-lg-3 col-sm-6 col-12">
-                    <div class="feature-box">
-                        <i class="feature-box__icon fas fa-building"></i>
-                        <h3 class="heading-tertiary u-margin-bottom-small">Water management</h3>
-                        <p class="feature-box__text">
-                            For large societies, schools, malls, sports complex etc. an end-to-end solution to automatically manage water in buildings with no upfront cost.
-                        </p>
-                    </div>
-                </div>
+                <!-- Initialize Swiper -->
+                <script>
+                var swiper = new Swiper('.swiper-container', {
+                    slidesPerView: 3,
+                    spaceBetween: 0,
+                    loop: true,
+                    centeredSlides: true,
+                    autoplay: {
+                    delay: 1500,
+                    disableOnInteraction: false,
+                    },
+                    pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    },
+                    // navigation: {
+                    //   nextEl: '.swiper-button-next',
+                    //   prevEl: '.swiper-button-prev',
+                    // },
+                });
+                </script>
 
-                <div class="col-lg-3 col-sm-6 col-12">
-                    <div class="feature-box">
-                        <i class="feature-box__icon fas fa-dollar-sign"></i>
-                        <h3 class="heading-tertiary u-margin-bottom-small">Savings</h3>
-                        <p class="feature-box__text">
-                            Saving water with saving money at your comfortability isn't that great! Saving up to 20% to 26% of money on utility bills per month.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
             </div>
 
         </section>
 
         <section class="section-products" id="products">
 
-            <div class="container">
+            <!-- <div class="container"> -->
 
-                <div class="u-center-text u-margin-bottom-huge">
+                <div class="u-center-text u-margin-bottom-medium">
                     <h2 class="heading-secondary">
                         Products
                     </h2>
                 </div> 
 
-                <div class="row">
+                <!-- <div class="row">
 
                     <div class="col-lg-4">
                         <div class="card">
@@ -208,9 +288,108 @@
                         </div>
                     </div>
 
+                </div> -->
+                <div class="row-n">
+
+                    <div class="col-1-of-3">
+                        <div class="card-n">
+                            <div class="card-n__side card-n__side--front">
+                                <div class="card-n__picture card-n__picture--1">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card-n__heading">
+                                    <span class="card-n__heading-span card-n__heading-span--1">wavly autocut</span>
+                                </h4>
+                                <div class="card-n__details">
+                                    <ul>
+                                        <li>For monoblock pumps/ submersible</li>
+                                        <li>Manual ON. Automatic OFF</li>
+                                        <li>No expensive sensor</li>
+                                        <li>Easy installation</li>
+                                        <li>1 year warranty</li>
+                                       </ul>
+                                </div>
+                            </div>
+                            <div class="card-n__side card-n__side--back card-n__side--back--1">
+                                <div class="card-n__cta">
+                                    <div class="card-n__price-box">
+                                        <p class="card-n__price-only">Only</p>
+                                        <p class="card-n__price-value">&#x20b9; 297</p>
+                                    </div>
+                                    <a href="autocut.html" class="btn btn--white">Know more</a>
+                                    <a href="autocut.html" class="btn btn--white"><i class="fas fa-shopping-cart"></i> Buy now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-3">
+                        <div class="card-n">
+                            <div class="card-n__side card-n__side--front">
+                                <div class="card-n__picture card-n__picture--2">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card-n__heading">
+                                    <span class="card-n__heading-span card-n__heading-span--2">wavly submersible</span>
+                                </h4>
+                                <div class="card-n__details">
+                                    <ul>
+                                        <li>For submersible only</li>
+                                        <li>Automatic ON/OFF</li>
+                                        <li>No expensive sensor</li>
+                                        <li>Easy installation</li>
+                                        <li>8 months warranty</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-n__side card-n__side--back card-n__side--back--2">
+                                <div class="card-n__cta">
+                                    <div class="card-n__price-box">
+                                        <p class="card-n__price-only">Only</p>
+                                        <p class="card-n__price-value">&#x20b9; 497</p>
+                                    </div>
+                                    <a href="submersible.html" class="btn btn--white">Know more</a>
+                                    <a href="submersible.html" class="btn btn--white"><i class="fas fa-shopping-cart"></i> Buy now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-3">
+                        <div class="card-n">
+                            <div class="card-n__side card-n__side--front">
+                                <div class="card-n__picture card-n__picture--3">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card-n__heading">
+                                    <span class="card-n__heading-span card-n__heading-span--3">wavly x</span>
+                                </h4>
+                                <div class="card-n__details">
+                                    <ul>
+                                        <li>For large infrastructure</li>
+                                        <li>Up to 15 people</li>
+                                        <li>3 tour guides</li>
+                                        <li>Sleep in provided tents</li>
+                                        <li>Difficulty: hard</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-n__side card-n__side--back card-n__side--back--3">
+                                <div class="card-n__cta">
+                                    <div class="card-n__price-box">
+                                        <p class="card-n__price-only">Only</p>
+                                        <p class="card-n__price-value">&#8377; 897</p>
+                                    </div>
+                                    <a href="wavlyx.html" class="btn btn--white">Know more</a>
+                                    <a href="wavlyx.html" class="btn btn--white"><i class="fas fa-shopping-cart"></i> Buy now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-            </div>
+            <!-- </div> -->
 
         </section>
 
@@ -273,6 +452,12 @@
                                     <div class="social__icon-box">
                                         <a href="#" class="social__link social__link--instagram" target="_blank"><i class="social__icon social__icon--instagram fab fa-instagram"></i></a>
                                     </div>
+                                    <div class="social__icon-box">
+                                        <a href="https://wa.me/919958158037?text=Hello%20Jatin%2C%20" class="social__link social__link--whatsapp" target="_blank"><i class="social__icon social__icon--whatsapp fab fa-whatsapp"></i></a>
+                                    </div>
+                                    <!-- <div class="social__icon-box">
+                                        <a href="https://api.whatsapp.com/send?phone=919958158037" class="social__link social__link--whatsapp" target="_blank"><i class="social__icon social__icon--whatsapp fab fa-whatsapp"></i></a>
+                                    </div> -->
 
                                 </div>
                                 
