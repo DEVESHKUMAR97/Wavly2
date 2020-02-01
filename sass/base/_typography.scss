@@ -28,7 +28,7 @@ body{
             animation: moveInLeftSmall 1s ease-out .1s 1;
             letter-spacing: 3rem;
             margin-left: 3rem;
-            text-shadow: 0 .5rem 3rem rgb(0, 0, 0);
+            text-shadow: 0 .5rem 2rem rgb(0, 0, 0);
         }
 
         @include respond(phone) {
