@@ -1142,11 +1142,11 @@ body {
   outline: none;
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-  border-bottom: 3px solid #6E70C2;
+  border-bottom: 3px solid #28b485;
 }
 
 .partner-form__input:focus:invalid {
-  border-bottom: 3px solid #28b485;
+  border-bottom: 3px solid #ff7730;
 }
 
 .partner-form__input::-webkit-input-placeholder {
