@@ -1,10 +1,15 @@
 .partner-form {
-
+    // change
     &__group {
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        flex-wrap: wrap;
+        &--checkbox {
+            align-items: flex-start;
+        }
     }
+
     &__group:not(:last-child) {
         margin-bottom: 1.2rem;
     }
@@ -22,7 +27,25 @@
         border-bottom: 3px solid transparent;
         transition: all .3s;
         margin-right: 10%;
-        margin-left: 5%;
+        // margin-left: 5%;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+
+        @include respond(tab-port) {
+            width: 80%;
+            margin-bottom: 1rem;
+            margin-top: .2rem;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        @include respond(phone) {
+            width: 90%;
+            margin-bottom: 1rem;
+            margin-top: .2rem;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
 
         &:focus {
             outline: none;
@@ -56,16 +79,89 @@
     &__label {
         font-size: 1.6rem;
         font-weight: 700;
-        margin-left: 2rem;
-        margin-top: .7rem;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        width: 40%;
         display: inline-block;
         transition: all .3s;
+        padding: 1rem 1.5rem;
+        text-align: right;
+
+        @include respond(tab-port) {
+            width: 80%;
+            text-align: left;
+            margin-bottom: .2rem;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        @include respond(phone) {
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
     }
 
     &__input:placeholder-shown + &__label {
         opacity: 0;
         visibility: hidden;
         transform: translateY(-4rem);
+    }
+
+    &__radio-input-group {
+        width: 40%;
+        display: inline-block;
+        padding: 1rem 1.5rem;
+        border: none;
+        margin-right: 10%;
+        // margin-left: 5%;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+
+        @include respond(tab-port) {
+            width: 80%;
+            margin-bottom: 1rem;
+            margin-top: .2rem;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        @include respond(phone) {
+            width: 90%;
+            margin-bottom: 1rem;
+            margin-top: .2rem;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    }
+
+    &__checkbox-input-group {
+        width: 40%;
+        display: inline-block;
+        padding: 1rem 1.5rem;
+        border: none;
+        margin-right: 10%;
+        // margin-left: 5%;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+
+        @include respond(tab-port) {
+            width: 80%;
+            margin-bottom: 1rem;
+            margin-top: .2rem;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        @include respond(phone) {
+            width: 90%;
+            margin-bottom: 1rem;
+            margin-top: .2rem;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
     }
 
     &__radio-group {
@@ -78,11 +174,32 @@
         }
     }
 
+    &__checkbox-group {
+        width: 100%;
+        margin-bottom: 2rem;
+
+        // @include respond(tab-port) {
+        //     width: 100%;
+        //     margin-bottom: 2rem;
+        // }
+    }
+
     &__radio-input {
         display: none;
     }
 
+    &__checkbox-input {
+        display: none;
+    }
+
     &__radio-label {
+        font-size: $default-font-size;
+        cursor: pointer;
+        position: relative;
+        padding-left: 4.5rem;
+    }
+
+    &__checkbox-label {
         font-size: $default-font-size;
         cursor: pointer;
         position: relative;
@@ -98,7 +215,7 @@
         // background-color: $color-primary;
         position: absolute;
         left: 0;
-        top: -.4rem;
+        top: -.2rem;
 
         &::after {
             content: "";
@@ -118,7 +235,40 @@
 
     }
 
+    &__checkbox-button {
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 20%;
+        border: .5rem solid $color-primary;
+        // background-color: $color-primary;
+        position: absolute;
+        left: 0;
+        top: -.2rem;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1.3rem;
+            width: 1.3rem;
+            border-radius: 20%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-primary;
+            opacity: 0;
+            transition: opacity .2s;
+
+        }
+
+    }
+
     &__radio-input:checked ~ &__radio-label &__radio-button::after {
+        opacity: 1;
+    }
+
+    &__checkbox-input:checked ~ &__checkbox-label &__checkbox-button::after {
         opacity: 1;
     }
 
