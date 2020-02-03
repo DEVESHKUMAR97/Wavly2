@@ -260,3 +260,22 @@
 
     
 }
+
+// for scrolling navigation active
+#top-menu li.active a {
+    border-top: 3px solid #34b3c7;
+    color: #34b3c7;
+
+    @include respond(tab-port) {
+        border-top: transparent;
+    }
+}
+
+#top-menu li.always-active a {
+    border-top: 3px solid #34b3c7;
+    color: #34b3c7;
+
+    @include respond(tab-port) {
+        border-top: transparent;
+    }
+}
