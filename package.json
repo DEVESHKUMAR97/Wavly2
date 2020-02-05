@@ -1,0 +1,26 @@
+{
+  "name": "wavly",
+  "version": "1.0.0",
+  "description": "A Water technology focused brand",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DEVESHKUMAR97/Wavly2.git"
+  },
+  "author": "Jaideep Yadav, Devesh Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DEVESHKUMAR97/Wavly2/issues"
+  },
+  "homepage": "https://github.com/DEVESHKUMAR97/Wavly2#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.2",
+    "nodemailer-mailgun-transport": "^2.0.0"
+  }
+}

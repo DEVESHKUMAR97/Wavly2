@@ -1,0 +1,487 @@
+<%- include('partials/header'); -%>
+
+<body data-spy="scroll" data-target=".navigation__nav" data-offset="100">
+
+    <!-- navigation -->
+    <!-- <div class="navigation__gate"> -->
+    <div class="navigation">
+        <div class="navigation__menu">
+            <div class="navigation__bar">&nbsp;</div>
+        </div>
+
+        <div class="navigation__overlay">&nbsp;</div>
+
+        <nav class="navigation__nav">
+            <div class="navigation__logo-box">
+                <a href="/" class="navigation__logo"><img src="images/logo-new.png" alt="Logo" class="navigation__logo-img"></a>
+            </div>
+            <ul class="navigation__list" id="top-menu">
+                <li class="navigation__item active"><a href="#home" class="navigation__link" data-text="home">home</a></li>
+                <li class="navigation__item"><a href="#about" class="navigation__link" data-text="about">about</a></li>
+                <li class="navigation__item"><a href="#products" class="navigation__link" data-text="products">products</a></li>
+                <li class="navigation__item"><a href="#contact" class="navigation__link" data-text="contact us">contact us</a></li>
+                <li class="navigation__item"><a href="/partner" target="_blank" class="navigation__link" data-text="become partner">become partner</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- </div> -->
+
+    <!-- Header -->
+    <header class="header" id="home">
+
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Wavly</span>
+                <span class="heading-primary--sub">A Water technology focused brand, aims to manage water assests of infrastructure via IoT, automation and data analytics.</span>
+            </h1>
+            <a href="#products" class="btn btn--white btn--animated btn--header-button">Discover</a>
+        </div>
+
+    </header>
+    
+    <main>
+
+        <section class="section-features"  id="about">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="feature-box">
+                            <i class="feature-box__icon fas fa-cogs"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Automation</h3>
+                            <p class="feature-box__text">
+                                Prevent wastage of water by automating water pumps at small flats, societies etc. using easily installable WAVLY products.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="feature-box">
+                            <i class="feature-box__icon fas fa-wifi"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">IOT & data</h3>
+                            <p class="feature-box__text">
+                                IOT enabled predictive analysis helps in leakage detection, system failure using real time data preventing huge damage.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="feature-box">
+                            <i class="feature-box__icon fas fa-building"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Water management</h3>
+                            <p class="feature-box__text">
+                                For large societies, schools, malls, sports complex etc. an end-to-end solution to automatically manage water in buildings with no upfront cost.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="feature-box">
+                            <i class="feature-box__icon fas fa-dollar-sign"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Savings</h3>
+                            <p class="feature-box__text">
+                                Saving water with saving money at your comfortability. Isn't that great! Saving up to 20% to 26% of money on utility bills per month.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h3 class="association">Associated with :</h3>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="support-box">
+                                <img src="images/DTU-IIF2.png" alt="DTU" class="img-responsive support-box__img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="support-box">
+                                <img src="images/nexus.png" alt="nexus" class="img-responsive support-box__img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="support-box">
+                                <img src="images/american.png" alt="american" class="img-responsive support-box__img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="support-box">
+                                <img src="images/smart-fifty.png" alt="smart-fifty" class="img-responsive support-box__img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="support-box">
+                                <img src="images/innotechnew.png" alt="innotech" class="img-responsive support-box__img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="support-box">
+                                <img src="images/texas2.png" alt="texas2" class="img-responsive support-box__img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="support-box">
+                                <img src="images/oyo.png" alt="texas2" class="img-responsive support-box__img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="support-box">
+                                <img src="images/delhigov.png" alt="texas2" class="img-responsive support-box__img">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <!-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
+                </div>
+                <!-- Swiper JS -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+
+                <!-- Initialize Swiper -->
+                <script>
+                var swiper = new Swiper('.swiper-container', {
+                    slidesPerView: 3,
+                    spaceBetween: 0,
+                    loop: true,
+                    centeredSlides: true,
+                    autoplay: {
+                    delay: 1500,
+                    disableOnInteraction: false,
+                    },
+                    pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    },
+                    // navigation: {
+                    //   nextEl: '.swiper-button-next',
+                    //   prevEl: '.swiper-button-prev',
+                    // },
+                });
+                </script>
+
+            </div>
+
+        </section>
+
+        <section class="section-products" id="products">
+
+            <!-- <div class="container"> -->
+
+                <div class="u-center-text u-margin-bottom-medium">
+                    <h2 class="heading-secondary">
+                        Products
+                    </h2>
+                </div> 
+
+                <!-- <div class="row">
+
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--1">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--1">Wavly AutoCut</span>
+                                </h4>
+                            </div>
+
+                            <div class="card__side card__side--back card__side--back--1">
+                                <div class="card__details">
+                                    <p class="card__paragraph">
+                                        Manual switch ON of water pump by user and automatic switch OFF Wavly Autocut.
+                                    </p>
+                                </div>
+                                <div class="card__button-section">
+                                    <a href="autocut.html" target="_blank" class="card__button card__button--1">Know More</a>
+                                    <a href="autocut.html" target="_blank" class="card__button card__button--1">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--2">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--2">Wavly Submersible</span>
+                                </h4>
+                            </div>
+
+                            <div class="card__side card__side--back card__side--back--2">
+                                <div class="card__details">
+                                    <p class="card__paragraph">
+                                        Automatic Switch ON and OFF of submersible according to water level in overhead tank(ONLY FOR SUBMERSIBLE).
+                                    </p>
+                                </div>
+                                <div class="card__button-section">
+                                    <a href="submersible.html" target="_blank" class="card__button card__button--2">Know More</a>
+                                    <a href="submersible.html" target="_blank" class="card__button card__button--2">Buy Now</a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--3">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--3">Wavly X</span>
+                                </h4>
+                            </div>
+
+                            <div class="card__side card__side--back card__side--back--3">
+                                <div class="card__details">
+                                    <p class="card__paragraph">
+                                        Water Management platform to automate and save water in big infrastructure like malls ,residential societies , sports complex etc. 
+                                    </p>
+                                </div>
+                                <div class="card__button-section">
+                                    <a href="wavlyx.html" target="_blank" class="card__button card__button--3">Know More</a>
+                                    <a href="wavlyx.html" target="_blank" class="card__button card__button--3">Buy Now</a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+
+                </div> -->
+                <div class="row-n">
+
+                    <div class="col-1-of-3">
+                        <div class="card-n">
+                            <div class="card-n__side card-n__side--front">
+                                <div class="card-n__picture card-n__picture--1">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card-n__heading">
+                                    <span class="card-n__heading-span card-n__heading-span--1">wavly autocut</span>
+                                </h4>
+                                <div class="card-n__details">
+                                    <ul>
+                                        <li>For monoblock pumps/ submersible</li>
+                                        <li>Manual ON. Automatic OFF</li>
+                                        <li>No expensive sensor</li>
+                                        <li>Easy installation</li>
+                                        <li>1 year warranty</li>
+                                       </ul>
+                                </div>
+                            </div>
+                            <div class="card-n__side card-n__side--back card-n__side--back--1">
+                                <div class="card-n__cta">
+                                    <div class="card-n__price-box">
+                                        <p class="card-n__price-only">Only</p>
+                                        <p class="card-n__price-value">&#x20b9; 297</p>
+                                    </div>
+                                    <a href="/autocut" class="btn btn--white" target="_self">Know more</a>
+                                    <a href="/autocut" class="btn btn--white" target="_self"><i class="fas fa-shopping-cart"></i> Buy now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-3">
+                        <div class="card-n">
+                            <div class="card-n__side card-n__side--front">
+                                <div class="card-n__picture card-n__picture--2">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card-n__heading">
+                                    <span class="card-n__heading-span card-n__heading-span--2">wavly submersible</span>
+                                </h4>
+                                <div class="card-n__details">
+                                    <ul>
+                                        <li>For submersible only</li>
+                                        <li>Automatic ON/OFF</li>
+                                        <li>No expensive sensor</li>
+                                        <li>Easy installation</li>
+                                        <li>8 months warranty</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-n__side card-n__side--back card-n__side--back--2">
+                                <div class="card-n__cta">
+                                    <div class="card-n__price-box">
+                                        <p class="card-n__price-only">Only</p>
+                                        <p class="card-n__price-value">&#x20b9; 497</p>
+                                    </div>
+                                    <a href="/submersible" class="btn btn--white" target="_self">Know more</a>
+                                    <a href="/submersible" class="btn btn--white" target="_self"><i class="fas fa-shopping-cart"></i> Buy now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-3">
+                        <div class="card-n">
+                            <div class="card-n__side card-n__side--front">
+                                <div class="card-n__picture card-n__picture--3">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card-n__heading">
+                                    <span class="card-n__heading-span card-n__heading-span--3">wavly x</span>
+                                </h4>
+                                <div class="card-n__details">
+                                    <ul>
+                                        <li>For large infrastructure</li>
+                                        <li>Up to 15 people</li>
+                                        <li>3 tour guides</li>
+                                        <li>Sleep in provided tents</li>
+                                        <li>Difficulty: hard</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-n__side card-n__side--back card-n__side--back--3">
+                                <div class="card-n__cta">
+                                    <div class="card-n__price-box">
+                                        <p class="card-n__price-only">Only</p>
+                                        <p class="card-n__price-value">&#8377; 897</p>
+                                    </div>
+                                    <a href="/wavlyx" class="btn btn--white" target="_self">Know more</a>
+                                    <a href="/wavlyx" class="btn btn--white" target="_self"><i class="fas fa-shopping-cart"></i> Buy now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            <!-- </div> -->
+
+        </section>
+
+        <section class="section-contact" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="contact">
+                            <div class="contact__form">
+                                <form action="#" class="form">
+
+                                    <div class="u-margin-bottom-small">
+                                        <h2 class="heading-secondary">
+                                            Contact Us
+                                        </h2>
+                                    </div>
+
+                                    <div class="form__group">
+                                        <input type="text" class="form__input" placeholder="Full name*" id="name" required>
+                                        <label for="name" class="form__label">Full name</label>
+                                    </div>
+
+                                    <div class="form__group">
+                                        <input type="email" class="form__input" placeholder="Email address*" id="email" required>
+                                        <label for="email" class="form__label">Email address</label>
+                                    </div>
+
+                                    <div class="form__group">
+                                        <input type="number" class="form__input" placeholder="Mobile number (optional)" id="mobile">
+                                        <label for="mobile" class="form__label">Mobile number</label>
+                                    </div>
+
+                                    <div class="form__group">
+                                        <!-- <input type="number" class="form__input" placeholder="Your message (optional)" id="mobile" required> -->
+                                        <textarea name="Message" class="form__input form__text-area" placeholder="Your message (optional)" id="message"  rows="4"></textarea>
+                                        <label for="message" class="form__label">Your message</label>
+                                    </div>
+
+                                    <div class="form__group">
+                                        <button class="btn btn-primary btn-lg form__btn">Submit &rarr;</button>
+                                    </div>
+
+                                </form>
+                            </div>
+
+                            <div class="contact__social">
+                                <div class="social">
+                                    <div class="social__icon-box">
+                                        <a href="#" class="social__link social__link--facebook" target="_blank"><i class="social__icon social__icon--facebook fab fa-facebook-f"></i></a>
+                                    </div>
+                                    <div class="social__icon-box">
+                                        <a href="#" class="social__link social__link--twitter" target="_blank"><i class="social__icon social__icon--twitter fab fa-twitter"></i></a>
+                                    </div>
+                                    <div class="social__icon-box">
+                                        <a href="#" class="social__link social__link--google" target="_blank"><i class="social__icon social__icon--google fab fa-google"></i></a>
+                                    </div>
+                                    <div class="social__icon-box">
+                                        <a href="#" class="social__link social__link--linkedin" target="_blank"><i class="social__icon social__icon--linkedin fab fa-linkedin-in"></i></a>
+                                    </div>
+                                    <div class="social__icon-box">
+                                        <a href="#" class="social__link social__link--instagram" target="_blank"><i class="social__icon social__icon--instagram fab fa-instagram"></i></a>
+                                    </div>
+                                    <div class="social__icon-box">
+                                        <a href="https://wa.me/919958158037?text=Hello%20Jatin%2C%20" class="social__link social__link--whatsapp" target="_blank"><i class="social__icon social__icon--whatsapp fab fa-whatsapp"></i></a>
+                                    </div>
+                                    <!-- <div class="social__icon-box">
+                                        <a href="https://api.whatsapp.com/send?phone=919958158037" class="social__link social__link--whatsapp" target="_blank"><i class="social__icon social__icon--whatsapp fab fa-whatsapp"></i></a>
+                                    </div> -->
+
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footer__text-box">
+                        <h4 class="footer__heading">About Us</h4>
+                        <p>We aim to save water assets using automation, IOT and data analytics in sustainable way.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footer__text-box">
+                        <h4 class="footer__heading">Support</h4 class="footer__heading">
+                        <p>We are supported by American embassy, University of Texas and Delhi govt and has been recognized as top 3000 startups by govt of India, currently DTU IIF incubated.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footer__text-box">
+                        <h4 class="footer__heading">Products</h4 class="footer__heading">
+                        <ul class="footer__list">
+                            <li><a class="footer__link" href="/autocut">Wavly AutoCut</a></li>
+                            <li><a class="footer__link" href="/submersible">Wavly Submersible</a></li>
+                            <li><a class="footer__link" href="/wavlyx">Wavly X</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footer__text-box">
+                        <h4 class="footer__heading">Contact</h4 class="footer__heading">
+                        <ul class="footer__list">
+                            <li><i class="fas fa-envelope">  : </i><span>contact@wavly.in</span></li>
+                            <li><i class="fas fa-phone-alt">  : </i><span>+91-9315080523</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer__copyright-box">
+                        <p class="footer__copyright">Copyright © <a class="footer__link" href="/">Walvy</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <%- include('partials/footer'); -%>
