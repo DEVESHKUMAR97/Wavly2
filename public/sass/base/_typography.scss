@@ -83,6 +83,14 @@ body{
         transform: skewY(2deg) skewX(15deg);
         text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
     }
+
+    &--autocut {
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+    }
+
+    &--submersible {
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+    }
 }
 
 .heading-tertiary {

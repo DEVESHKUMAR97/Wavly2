@@ -2,22 +2,12 @@
     position: fixed;
     width: 100%;
     z-index: 10;
-    // height: 100vh;
+    pointer-events: none;
 
     @include respond(tab-port) {
         perspective: 75rem;
         overflow: hidden;
-        height: 8rem;
-
-        &__open-for-height.navigation {
-            height: 100vh;
-        }
-
-        &__width-change.navigation {
-            height: 100vh;
-        }
         
-
         &__open &__nav{
             @include respond(tab-port) {
                 transform: rotateY(0);
@@ -32,12 +22,14 @@
         position: fixed;
         transform: scaleX(0);
         opacity: 0;
-        transition: opacity 1s;  
+        transition: opacity 1s; 
+        pointer-events: none; 
         
         &.navigation__open {
             @include respond(tab-port) {
                 opacity: 1;
                 transform: scaleX(1);
+                pointer-events: all;
             }
         }
     }
@@ -55,6 +47,7 @@
         height: 6rem;
         width: 7rem;
         box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+        pointer-events: all;
 
 
         @include respond(tab-port) {
@@ -111,6 +104,7 @@
         // box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
         overflow: hidden;
         transition: all .2s ease;
+        pointer-events: all;
 
         // scrolling navigation effect 
         &.scrolled-nav {   
@@ -134,15 +128,17 @@
             transform: rotateY(180deg);
             transform-origin: top left;
             transition: transform 650ms cubic-bezier(.55,.55,.675,.19);
+            pointer-events: none;
 
             &.scrolled-nav {   
                 height: 100vh;
                 line-height: initial;
+                pointer-events: none;
             }
 
-            // &.navigation__open {
-            //     display: block
-            // }
+            &.navigation__open {
+                pointer-events: all;
+            }
 
         }
     }

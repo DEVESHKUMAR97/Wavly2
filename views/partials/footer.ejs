@@ -1,8 +1,93 @@
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col-md-6 col-12">
+                  <div class="footer__text-box">
+                      <h4 class="footer__heading">About Us</h4>
+                      <p>We aim to save water assets using automation, IOT and data analytics in sustainable way.</p>
+                  </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-12">
+                  <div class="footer__text-box">
+                      <h4 class="footer__heading">Support</h4 class="footer__heading">
+                      <p>We are supported by Nexus(American centre), University of Texas and Delhi govt and has been recognized as top 3000 startups by govt of India, currently DTU IIF incubated.</p>
+                  </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-12">
+                  <div class="footer__text-box">
+                      <h4 class="footer__heading">Products</h4 class="footer__heading">
+                      <ul class="footer__list">
+                          <li><a class="footer__link" href="/autocut">Wavly AutoCut</a></li>
+                          <li><a class="footer__link" href="/submersible">Wavly Submersible</a></li>
+                          <li><a class="footer__link" href="/wavlyx">Wavly X</a></li>
+                      </ul>
+                  </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-12">
+                  <div class="footer__text-box">
+                      <h4 class="footer__heading">Contact</h4 class="footer__heading">
+                      <ul class="footer__list">
+                          <li><i class="fas fa-envelope"></i><strong> : </strong><span>contact@wavly.in</span></li>
+                          <li><i class="fas fa-envelope" style="opacity: 0;"></i><strong> : </strong><span>wavlywater@gmail.com</span></li>
+                          <li><i class="fas fa-phone-alt"></i><strong> : </strong><span>+91-9315080523</span></li>
+                          <li><i class="fas fa-phone-alt" style="opacity: 0;"></i><strong> : </strong><span>+91-9354039897</span></li>
+                      </ul>
+                  </div>
+              </div>
+
+          </div>
+
+          <div class="row">
+              <div class="col-12">
+                  <div class="footer__copyright-box">
+                      <p class="footer__copyright">Copyright © <a class="footer__link" href="/">Wavly</a></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </footer>
+    
+    
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="/js/main.js"></script>
+    <script>
+        var div = document.createElement('div');
+        div.className = 'fb-customerchat';
+        div.setAttribute('page_id', '111180743580552');
+        div.setAttribute('ref', 'b64:aHR0cHM6Ly9tLm1lL1dhdmx5V2F0ZXI/cmVmPVdlbGNvbWUlMjBNZXNzYWdl');
+        document.body.appendChild(div);
+        window.fbMessengerPlugins = window.fbMessengerPlugins || {
+          init: function () {
+            FB.init({
+              appId            : '1678638095724206',
+              autoLogAppEvents : true,
+              xfbml            : true,
+              version          : 'v3.3'
+            });
+          }, callable: []
+        };
+        window.fbAsyncInit = window.fbAsyncInit || function () {
+          window.fbMessengerPlugins.callable.forEach(function (item) { item(); });
+          window.fbMessengerPlugins.init();
+        };
+        setTimeout(function () {
+          (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+        }, 0);
+      </script>
 </body>
 </html>

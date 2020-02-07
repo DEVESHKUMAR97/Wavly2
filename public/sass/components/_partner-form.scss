@@ -5,7 +5,7 @@
         align-items: center;
         justify-content: flex-end;
         flex-wrap: wrap;
-        &--checkbox {
+        &--checkbox, &--radio-three {
             align-items: flex-start;
         }
     }
@@ -168,6 +168,11 @@
         width: 49%;
         display: inline-block;
 
+        &--radio-three {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
         @include respond(tab-port) {
             width: 100%;
             margin-bottom: 2rem;
@@ -211,7 +216,7 @@
         width: 3rem;
         height: 3rem;
         border-radius: 50%;
-        border: .5rem solid $color-primary;
+        border: .5rem solid $radio-button-color;
         // background-color: $color-primary;
         position: absolute;
         left: 0;
@@ -227,7 +232,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: $color-primary;
+            background-color: $radio-button-color;
             opacity: 0;
             transition: opacity .2s;
 
@@ -240,7 +245,7 @@
         width: 3rem;
         height: 3rem;
         border-radius: 20%;
-        border: .5rem solid $color-primary;
+        border: .5rem solid $radio-button-color;
         // background-color: $color-primary;
         position: absolute;
         left: 0;
@@ -256,7 +261,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: $color-primary;
+            background-color: $radio-button-color;
             opacity: 0;
             transition: opacity .2s;
 

@@ -1,11 +1,6 @@
 <%- include('partials/header'); -%>
 
-<body data-spy="scroll" data-target=".navigation__nav" data-offset="100">
-
-    <!-- <div class="partner-background"> -->
-
         <!-- navigation -->
-        <!-- <div class="navigation__gate"> -->
         <div class="navigation">
             <div class="navigation__menu">
                 <div class="navigation__bar">&nbsp;</div>
@@ -18,10 +13,10 @@
                     <a href="/" class="navigation__logo"><img src="images/logo-new.png" alt="Logo" class="navigation__logo-img"></a>
                 </div>
                 <ul class="navigation__list" id="top-menu">
-                    <li class="navigation__item"><a href="/#home" class="navigation__link" data-text="home">home</a></li>
-                    <li class="navigation__item"><a href="/#about" class="navigation__link" data-text="about">about</a></li>
-                    <li class="navigation__item always-active"><a href="/#products" class="navigation__link" data-text="products">products</a></li>
-                    <li class="navigation__item"><a href="/#contact" class="navigation__link" data-text="contact us">contact us</a></li>
+                    <li class="navigation__item"><a href="/#home" class="navigation__link page-scroll" data-text="home">home</a></li>
+                    <li class="navigation__item"><a href="/#about" class="navigation__link page-scroll" data-text="about">about</a></li>
+                    <li class="navigation__item always-active"><a href="/#products" class="navigation__link page-scroll" data-text="products">products</a></li>
+                    <li class="navigation__item"><a href="/#contact" class="navigation__link page-scroll" data-text="contact us">contact us</a></li>
                     <li class="navigation__item"><a href="/partner" class="navigation__link" data-text="become partner">become partner</a></li>
                 </ul>
             </nav>
@@ -33,14 +28,14 @@
                 <section class="section-product-content">
                     <div class="container">
                         <div class="u-center-text u-margin-bottom-medium">
-                            <h2 class="heading-secondary">Wavly AutoCut</h2>
+                            <h2 class="heading-secondary heading-secondary--autocut">Wavly AutoCut</h2>
                         </div>
 
                         <div class="product-content row">
-                            <div class="product-content__image col-5">
-                                <img src="images/autotilt.jpg" class="img-fluid" alt="autocut">
+                            <div class="product-content__image col-md-5">
+                                <img src="images/autofinal.png" class="img-fluid" alt="autocut">
                             </div>
-                            <ul class="product-content__list col-7">
+                            <ul class="product-content__list col-md-7">
                                 <li class="product-content__item">
                                     <span class="product-content__icon"><i class="fas fa-star"></i></span>
                                     <p class="product-content__text">Taking care of your ease and saving water at same time. Wavly Auto cut requires manual ON of water pump by user .Once your overhead tank is filled completely , Wavly will auto shut OFF the water pump.</p>
@@ -63,87 +58,85 @@
                                 </li>
                             </ul>
                         </div>
+
+                        <div class="product-content__buttons">
+                            <a href="https://www.amazon.in/Wavly-Better-Water-Overflow-Alarm/dp/B07VL684Z6" class="btn btn--autocut" target="_blank"><i class="fas fa-shopping-cart" aria-hidden="true"></i> Buy now!</a>
+                            <a href="#installation" class="btn btn--autocut page-scroll">See connections <i class="fas fa-long-arrow-alt-down"></i></a>
+                        </div>
                     </div>
                 </section>
                 
-                <section class="section-product-composition">
+                <section class="section-product-composition" id="installation">
                     <div class="container">
                         <div class="u-center-text u-margin-bottom-medium">
-                            <h2 class="heading-secondary">Installation Circuits</h2>
+                            <h2 class="heading-secondary heading-secondary--autocut">Installation Circuits</h2>
                         </div>
 
                         <div class="product-composition">
                             <div class="row">
                                 <div class="col-md-4 col-12">
-                                    <img src="images/autocut1.png" alt="autocut circuit" class="product-composition__image product-composition__image--1">
+                                    <div data-popup-target="#popup1">
+                                        <img src="images/autocut1.png" alt="autocut circuit" class="product-composition__image">
+                                    </div>
                                 </div>
+
                                 <div class="col-md-4 col-12">
-                                    <img src="images/autocut2.png" alt="autocut circuit" class="product-composition__image product-composition__image--1">
+                                    <div data-popup-target="#popup2">
+                                        <img src="images/autocut2.png" alt="autocut circuit" class="product-composition__image">
+                                    </div>
                                 </div>
+
                                 <div class="col-md-4 col-12">
-                                    <img src="images/autocut3.png" alt="autocut circuit" class="product-composition__image product-composition__image--1">
+                                    <div data-popup-target="#popup3">
+                                        <img src="images/autocut3.png" alt="autocut circuit" class="product-composition__image">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    
                 </section>
         </main>
 
-
-
-
-
-
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <div class="footer__text-box">
-                            <h4 class="footer__heading">About Us</h4>
-                            <p>We aim to save water assets using automation, IOT and data analytics in sustainable way.</p>
-                        </div>
-                    </div>
-    
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <div class="footer__text-box">
-                            <h4 class="footer__heading">Support</h4 class="footer__heading">
-                            <p>We are supported by American embassy, University of Texas and Delhi govt and has been recognized as top 3000 startups by govt of India, currently DTU IIF incubated.</p>
-                        </div>
-                    </div>
-    
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <div class="footer__text-box">
-                            <h4 class="footer__heading">Products</h4 class="footer__heading">
-                            <ul class="footer__list">
-                                <li><a class="footer__link" href="/autocut">Wavly AutoCut</a></li>
-                                <li><a class="footer__link" href="/submersible">Wavly Submersible</a></li>
-                                <li><a class="footer__link" href="/wavlyx">Wavly X</a></li>
-                            </ul>
-                        </div>
-                    </div>
-    
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <div class="footer__text-box">
-                            <h4 class="footer__heading">Contact</h4 class="footer__heading">
-                            <ul class="footer__list">
-                                <li><i class="fas fa-envelope">  : </i><span>contact@wavly.in</span></li>
-                                <li><i class="fas fa-phone-alt">  : </i><span>+91-9315080523</span></li>
-                            </ul>
-                        </div>
-                    </div>
-    
-                </div>
-    
-                <div class="row">
-                    <div class="col-12">
-                        <div class="footer__copyright-box">
-                            <p class="footer__copyright">Copyright © <a class="footer__link" href="/">Walvy</a></p>
-                        </div>
-                    </div>
+        <!-- image popups-->
+        <div class="popup" id="popup1">
+            <div class="popup__header">
+                <div class="popup__title">Wire labels for AutoCut</div>
+                <div data-close-button class="popup__close-button">
+                    &times;
                 </div>
             </div>
-        </footer>
-    <!-- </div> -->
+            <div class="popup__body">
+                <img src="images/autocut1.png" alt="autocut circuit" class="popup__image">
+            </div>
+        </div>
 
+
+        <div class="popup" id="popup2">
+            <div class="popup__header">
+                <div class="popup__title">Connections for Submersible AutoCut</div>
+                <div data-close-button class="popup__close-button">
+                    &times;
+                </div>
+            </div>
+            <div class="popup__body">
+                <img src="images/autocut2.png" alt="autocut circuit" class="popup__image">
+            </div>
+        </div>
+
+        <div class="popup" id="popup3">
+            <div class="popup__header">
+                <div class="popup__title">Connections for Monoblock (AutoCut)</div>
+                <div data-close-button class="popup__close-button">
+                    &times;
+                </div>
+            </div>
+            <div class="popup__body">
+                <img src="images/autocut3.png" alt="autocut circuit" class="popup__image">
+            </div>
+        </div>
+        <div class="popup__overlay"></div>
+        <!-- image popups end-->
 
 <%- include('partials/footer'); -%>

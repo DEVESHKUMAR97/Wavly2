@@ -91,6 +91,24 @@
             // }
         }
     }
+
+    &--autocut {
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+        color: $color-white;
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+
+    &--submersible {
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+        color: $color-white;
+
+        &:hover {
+            color: $color-white;
+        }
+    }
     
     &::after{
         content: "";

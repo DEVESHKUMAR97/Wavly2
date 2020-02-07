@@ -15,37 +15,12 @@ $(function () {
 function selector(s) {
     return document.querySelector(s);
 }
-
 selector(".navigation__menu").addEventListener('click', function(){
     this.classList.toggle('navigation__open');
     selector(".navigation").classList.toggle('navigation__open');
     selector(".navigation__overlay").classList.toggle('navigation__open');
     selector(".navigation__nav").classList.toggle('navigation__open');
-
-
-    // changes
-    var navi = $(".navigation");
-    if(navi.hasClass('navigation__open-for-height')){
-        setTimeout(function() {
-            $(".navigation").removeClass('navigation__open-for-height');
-        }, 650);
-    } else {
-        $(".navigation").addClass('navigation__open-for-height');
-    }
-    
 });
-
-$(window).resize(function(){
-if ($(window).width() < 768) {
-    $('.navigation').addClass('navigation__width-change');
-    setTimeout(function() {
-        $('.navigation').removeClass('navigation__width-change');
-    }, 1000);
-    
-}
-});
-
-
 
 
 // 3. accrodion
@@ -75,16 +50,17 @@ var lastId,
       if (item.length) { return item; }
     });
 
-// // Bind click handler to menu items
-// // so we can get a fancy scroll animation
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
 // menuItems.click(function(e){
-//   var href = $(this).attr("href"),
-//       offsetTop = (href === "#head" || href === "index.html") ? 0 : $(href).offset().top-topMenuHeight+1;
-//     // offsetTop = 0;
-//   $('html, body').stop().animate({ 
-//       scrollTop: offsetTop
-//   }, 300);
-//   e.preventDefault();
+//     var href = $(this).attr("href"),
+//         // offsetTop = (href === "#head" || href === "index.html") ? 0 : $(href).offset().top-topMenuHeight+1;  
+//         offsetTop = $(href).offset().top-topMenuHeight+1;
+
+//     $('html, body').stop().animate({ 
+//         scrollTop: offsetTop
+//     }, 100);
+//     e.preventDefault();
 // });
 
 // Bind to scroll
@@ -109,3 +85,53 @@ $(window).scroll(function(){
          .end().filter("[href='#"+id+"']").parent().addClass("active");
    }                   
 });
+
+// 6.jQuery for page scrolling feature - requires jQuery Easing plugin
+$(function() {
+    $(document).on('click', 'a.page-scroll', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 100, 'easeInOutExpo');
+        event.preventDefault();
+    });
+});
+
+
+// 7. popups
+const openPopupButtons = document.querySelectorAll('[data-popup-target]');
+const closePopupButtons = document.querySelectorAll('[data-close-button]');
+const popupOverlay = document.getElementsByClassName('popup__overlay')[0];
+
+openPopupButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const popup = document.querySelector(button.dataset.popupTarget);
+      openPopup(popup);
+    });
+  });
+  
+  popupOverlay.addEventListener('click', () => {
+    const popups = document.querySelectorAll('.popup.popup__active');
+    popups.forEach(popup => {
+      closePopup(popup);
+    });
+  });
+  
+  closePopupButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const popup = button.closest('.popup');
+      closePopup(popup);
+    });
+  });
+  
+  function openPopup(popup) {
+    if (popup == null) return;
+    popup.classList.add('popup__active');
+    popupOverlay.classList.add('popup__active');
+  }
+  
+  function closePopup(popup) {
+    if (popup == null) return;
+    popup.classList.remove('popup__active');
+    popupOverlay.classList.remove('popup__active');
+  }

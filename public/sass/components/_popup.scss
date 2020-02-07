@@ -1,0 +1,94 @@
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 300ms ease-in-out;
+    border: 1px solid $color-black;
+    border-radius: 4px;
+    z-index: 10000000;
+    background-color: $color-white;
+    overflow: hidden;
+    height: 90vh;
+    width: 80%;
+
+    @include respond(tab-land) {
+    width: 85%;
+    }
+
+    @include respond(tab-port) {
+    width: 90%;
+    }
+
+    @include respond(phone) {
+    width: 95%;
+    }
+
+    &.popup__active {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &__header {
+        display: flex;
+        padding: 1rem 1.5rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: bold;
+        z-index: 1;
+    }
+
+    &__close-button {
+        cursor: pointer;
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    &__body {
+        @include absCenter;
+        width: 45%;
+        // height: 40%;
+        padding: 1rem 1.5rem;
+        @include respond(big-tab) {
+            width: 55%;
+        }
+
+        @include respond(tab-land) {
+        width: 64%;
+        }
+
+        @include respond(tab-port) {
+        width: 80%;
+        }
+
+        @include respond(phone) {
+        width: 95%;
+        }
+    }
+    
+    &__image {    
+        width: 100%;
+    }
+
+    &__overlay {
+        position: fixed;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($color-black, .8);
+        pointer-events: none;   /// no touch on overlay
+        z-index: 100000;
+        transition: 300ms ease-in-out;
+
+
+        &.popup__active {
+            opacity: 1;
+            pointer-events: all;    /// touch on overlay
+        }
+    }
+}

@@ -21,5 +21,18 @@
     &__image {
         display: flex;
         align-items: center;
+
+        @include respond(tab-port){
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__buttons {
+        text-align: center;
+        margin-top: 5rem;
+        display: flex;
+        justify-content: space-around;
     }
 }

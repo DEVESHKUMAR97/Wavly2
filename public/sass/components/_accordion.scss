@@ -9,6 +9,8 @@
 
     &__link {  // like h3
             font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
             color: rgba(255, 255, 255, .8);
             text-decoration: none;
             background-color: #283042;
@@ -35,6 +37,8 @@
         overflow: hidden;
         position: relative;
         background-color: #212838;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
         transition: max-height 650ms;
 
         &::before {

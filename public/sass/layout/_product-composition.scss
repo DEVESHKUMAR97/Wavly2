@@ -11,6 +11,7 @@
         &:hover {
             transform: scale(1.05) translateY(-.5rem);
             box-shadow: 0 2rem 4rem rgba($color-black, .5);
+            cursor: pointer;
         }
     }
 
