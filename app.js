@@ -14,7 +14,18 @@ app.use(express.static(__dirname + "/public"));
 
 
 
-var PORT = 3000;
+// generalising port and ip address
+var port = process.env.PORT;
+if(port == undefined){
+  port=3000;
+}
+// console.log(port);
+
+var ip=process.env.IP;
+// if(ip == undefined){
+//   ip="127.0.0.1";
+// }
+// console.log(ip);
 
 app.get('/', function(req, res){
     res.render("index");
@@ -94,6 +105,6 @@ app.get('*', function(req, res){
     res.render("errorpage");
 })
 
-app.listen(PORT, function(){
+app.listen(port, ip, function(){
     console.log("app is started on port ", PORT, "!!!");
 });
