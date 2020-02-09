@@ -302,6 +302,14 @@
                                             Contact Us
                                         </h2>
                                     </div>
+                                    
+                                    <% if(messages.errorMessage && messages.errorMessage.length > 0) { %>
+                                        <p class="form__msg-error"><%= messages.errorMessage %></p>
+                                    <% } %>
+
+                                    <% if(messages.infoMessage && messages.infoMessage.length > 0) { %>
+                                        <p class="form__msg-info"><%= messages.infoMessage %></p>
+                                    <% } %>
 
                                     <div class="form__group">
                                         <input type="text" class="form__input" placeholder="Full name*" id="name" name="contact_name" required>

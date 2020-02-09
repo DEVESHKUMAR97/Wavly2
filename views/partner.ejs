@@ -24,8 +24,6 @@
                 </ul>
             </nav>
         </div>
-    
-
 
         <main>
                 <section class="section-partner-heading container">
@@ -40,7 +38,7 @@
                             <div class="col-12">
                                 <div class="partner-form-background">
                                     <div class="partner-form-background__area">
-                                        <form action="#" class="partner-form">
+                                        <form action="partner_request" method="POST" class="partner-form" autocomplete="off">
 
                                             <div class="u-margin-bottom-medium">
                                                 <h3 class="heading-tertiary u-center-text">
@@ -48,9 +46,17 @@
                                                 </h3>
                                             </div>
 
+                                            <% if(messages.errorMessage && messages.errorMessage.length > 0) { %>
+                                                <p class="form__msg-error text-center"><%= messages.errorMessage %></p>
+                                            <% } %>
+        
+                                            <% if(messages.infoMessage && messages.infoMessage.length > 0) { %>
+                                                <p class="form__msg-info text-center"><%= messages.infoMessage %></p>
+                                            <% } %>
+
                                             <div class="partner-form__group">
                                                 <label for="partner-name" class="partner-form__label">Name* :</label>
-                                                <input type="text" class="partner-form__input" placeholder="Name*" id="partner-name" name="partner-name" required>
+                                                <input type="text" class="partner-form__input" placeholder="Name*" id="partner-name" name="partner_name" required>
                                             </div>
 
                                             <fieldset>
@@ -58,7 +64,7 @@
                                                     <legend class="partner-form__label">You are* :</legend>
                                                     <div class="partner-form__radio-input-group">
                                                         <div class="partner-form__radio-group partner-form__radio-group--radio-three">
-                                                            <input type="radio" class="partner-form__radio-input" id="retailer" value="retailer" name="choice" required>
+                                                            <input type="radio" class="partner-form__radio-input" id="retailer" value="retailer" name="partner_type" required>
                                                             <label for="retailer" class="partner-form__radio-label">
                                                                 <span class="partner-form__radio-button"></span>
                                                                 Retailer
@@ -66,14 +72,14 @@
                                                         </div>
                     
                                                         <div class="partner-form__radio-group partner-form__radio-group--radio-three">
-                                                            <input type="radio" class="partner-form__radio-input" id="distributor" value="distributor" name="choice">
+                                                            <input type="radio" class="partner-form__radio-input" id="distributor" value="distributor" name="partner_type">
                                                             <label for="distributor" class="partner-form__radio-label">
                                                                 <span class="partner-form__radio-button"></span>
                                                                 Distributor
                                                             </label>
                                                         </div>
                                                         <div class="partner-form__radio-group partner-form__radio-group--radio-three">
-                                                            <input type="radio" class="partner-form__radio-input" id="contractor" value="contractor" name="choice">
+                                                            <input type="radio" class="partner-form__radio-input" id="contractor" value="contractor" name="partner_type">
                                                             <label for="contractor" class="partner-form__radio-label">
                                                                 <span class="partner-form__radio-button"></span>
                                                                 Contractor/Company
@@ -85,22 +91,22 @@
 
                                             <div class="partner-form__group">
                                                 <label for="company-name" class="partner-form__label">Company/Firm Name* :</label>
-                                                <input type="text" class="partner-form__input" placeholder="Company/Firm Name*" id="company-name" name="company-name" required>
+                                                <input type="text" class="partner-form__input" placeholder="Company/Firm Name*" id="company-name" name="partner_company_name" required>
                                             </div>
 
                                             <div class="partner-form__group">
                                                 <label for="partner-mobile" class="partner-form__label">Mobile/Contact number* :</label>
-                                                <input type="number" class="partner-form__input" placeholder="Mobile/Contact number*" id="partner-mobile" required>
+                                                <input type="number" class="partner-form__input" placeholder="Mobile/Contact number*" id="partner-mobile" name="partner_mobile" required>
                                             </div>  
 
                                             <div class="partner-form__group">
                                                 <label for="partner-email" class="partner-form__label">Email* :</label>
-                                                <input type="email" class="partner-form__input" placeholder="Email*" id="partner-email" name="partner-email" required>
+                                                <input type="email" class="partner-form__input" placeholder="Email*" id="partner-email" name="partner_email" required>
                                             </div>
 
                                             <div class="partner-form__group">
                                                 <label for="web-name" class="partner-form__label">Website :</label>
-                                                <input type="text" class="partner-form__input" placeholder="Website" id="web-name" name="web-name">
+                                                <input type="text" class="partner-form__input" placeholder="Website" id="web-name" name="partner_web_name">
                                             </div>
 
                                             <!-- <div class="partner-form__group">
@@ -113,7 +119,7 @@
                                                     <legend class="partner-form__label">If Company has GST Number ?:</legend>
                                                     <div class="partner-form__radio-input-group">
                                                         <div class="partner-form__radio-group">
-                                                            <input type="radio" class="partner-form__radio-input" id="gst-yes" value="yes" name="gst_number">
+                                                            <input type="radio" class="partner-form__radio-input" id="gst-yes" value="yes" name="partner_has_gst">
                                                             <label for="gst-yes" class="partner-form__radio-label">
                                                                 <span class="partner-form__radio-button"></span>
                                                                 Yes
@@ -121,7 +127,7 @@
                                                         </div>
                     
                                                         <div class="partner-form__radio-group">
-                                                            <input type="radio" class="partner-form__radio-input" id="gst-no" value="no" name="gst_number">
+                                                            <input type="radio" class="partner-form__radio-input" id="gst-no" value="no" name="partner_has_gst">
                                                             <label for="gst-no" class="partner-form__radio-label">
                                                                 <span class="partner-form__radio-button"></span>
                                                                 No
@@ -136,7 +142,7 @@
                                                     <legend class="partner-form__label">If owns shop?</legend>
                                                     <div class="partner-form__radio-input-group">
                                                         <div class="partner-form__radio-group">
-                                                            <input type="radio" class="partner-form__radio-input" id="owner-yes" value="yes" name="owner">
+                                                            <input type="radio" class="partner-form__radio-input" id="owner-yes" value="yes" name="partner_owner">
                                                             <label for="owner-yes" class="partner-form__radio-label">
                                                                 <span class="partner-form__radio-button"></span>
                                                                 Yes
@@ -144,7 +150,7 @@
                                                         </div>
                     
                                                         <div class="partner-form__radio-group">
-                                                            <input type="radio" class="partner-form__radio-input" id="owner-no" value="no" name="owner">
+                                                            <input type="radio" class="partner-form__radio-input" id="owner-no" value="no" name="partner_owner">
                                                             <label for="owner-no" class="partner-form__radio-label">
                                                                 <span class="partner-form__radio-button"></span>
                                                                 No
@@ -159,7 +165,7 @@
                                                     <legend class="partner-form__label">Products interested in* :</legend>
                                                     <div class="partner-form__checkbox-input-group">
                                                         <div class="partner-form__checkbox-group">
-                                                            <input type="checkbox" class="partner-form__checkbox-input" id="wavlyautocut" value="wavlyautocut" name="interested" required>
+                                                            <input type="checkbox" class="partner-form__checkbox-input" id="wavlyautocut" value="wavlyautocut" name="partner_interested" required>
                                                             <label for="wavlyautocut" class="partner-form__checkbox-label">
                                                                 <span class="partner-form__checkbox-button"></span>
                                                                 Wavly AutoCut
@@ -167,7 +173,7 @@
                                                         </div>
                     
                                                         <div class="partner-form__checkbox-group">
-                                                            <input type="checkbox" class="partner-form__checkbox-input" id="wavlysubmersible" value="wavlysubmersible" name="interested">
+                                                            <input type="checkbox" class="partner-form__checkbox-input" id="wavlysubmersible" value="wavlysubmersible" name="partner_interested">
                                                             <label for="wavlysubmersible" class="partner-form__checkbox-label">
                                                                 <span class="partner-form__checkbox-button"></span>
                                                                 Wavly Submersible
@@ -175,7 +181,7 @@
                                                         </div>
 
                                                         <div class="partner-form__checkbox-group">
-                                                            <input type="checkbox" class="partner-form__checkbox-input" id="wavlyx" value="wavlyx" name="interested">
+                                                            <input type="checkbox" class="partner-form__checkbox-input" id="wavlyx" value="wavlyx" name="partner_interested">
                                                             <label for="wavlyx" class="partner-form__checkbox-label">
                                                                 <span class="partner-form__checkbox-button"></span>
                                                                 Wavly X
@@ -187,17 +193,17 @@
 
                                             <div class="partner-form__group">
                                                 <label for="team-size" class="partner-form__label">Team Size :</label>
-                                                <input type="number" class="partner-form__input" placeholder="Team Size" id="team-size" name="team-size">
+                                                <input type="number" class="partner-form__input" placeholder="Team Size" id="team-size" name="partner_team_size">
                                             </div>
 
                                             <div class="partner-form__group">
                                                 <!-- <input type="number" class="partner-form__input" placeholder="Your message (optional)" id="mobile" required> -->
                                                 <label for="partner-message" class="partner-form__label">Your message :</label>
-                                                <textarea name="partner-message" class="partner-form__input partner-form__text-area" placeholder="Your message" id="partner-message"  rows="4"></textarea>
+                                                <textarea name="partner_message" class="partner-form__input partner-form__text-area" placeholder="Your message" id="partner-message"  rows="4"></textarea>
                                             </div>
 
                                             <div class="partner-form__group">
-                                                <button class="btn btn-primary btn-lg partner-form__btn">Submit &rarr;</button>
+                                                <button type="submit" class="btn btn-primary btn-lg partner-form__btn">Submit &rarr;</button>
                                             </div>
 
                                         </form>

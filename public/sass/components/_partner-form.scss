@@ -190,11 +190,15 @@
     }
 
     &__radio-input {
-        display: none;
+        // display: none;
+        // change
+        opacity: 0;
     }
 
     &__checkbox-input {
-        display: none;
+        // display: none;
+        // change
+        opacity: 0;
     }
 
     &__radio-label {
@@ -202,6 +206,12 @@
         cursor: pointer;
         position: relative;
         padding-left: 4.5rem;
+        // change
+        right: 2.3rem;
+
+        @include respond(tab-port){
+            right: 2.5rem;
+        }
     }
 
     &__checkbox-label {
@@ -209,6 +219,12 @@
         cursor: pointer;
         position: relative;
         padding-left: 4.5rem;
+        // change
+        right: 2.3rem;
+
+        @include respond(tab-port){
+            right: 2.5rem;
+        }
     }
 
     &__radio-button {

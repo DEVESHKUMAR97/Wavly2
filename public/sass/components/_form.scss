@@ -128,4 +128,33 @@
         padding-left: 1.7rem;
         font-size: 1.6rem;
     }
+
+
+    &__msg-info {
+        // width: 90%;
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        color: $color-valid;
+        // border: 2px solid $color-valid;
+        font-size: 1.6rem;
+        font-weight: bold;
+
+        @include respond(tab-land) {
+            width: 100%;
+        }
+    }
+
+    &__msg-error {
+        // width: 90%;
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        color: $color-invalid;
+        // border: 2px solid $color-invalid;
+        font-size: 1.6rem;
+        font-weight: bold;
+
+        @include respond(tab-land) {
+            width: 100%;
+        }
+    }
 }

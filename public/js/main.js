@@ -1,10 +1,25 @@
-// 1. scrolling navigation effect
+// 1. scrolling navigation effect and preloader
 $(function () {
     $(window).on("scroll load", function () {
         var $nav = $(".navigation__nav");
         var $box = $(".navigation__logo-box")
         $nav.toggleClass("scrolled-nav", $(this).scrollTop() > ($nav.height()) / 2);
         $box.toggleClass("scrolled-logo-box", $(this).scrollTop() > ($nav.height()) / 2);
+    });
+
+
+    // preloader
+    $(window).on('load', function() {
+      var preloaderFadeOutTime = 100;
+      function hidePreloader() {
+        var preloader = $('.loader-background');
+        setTimeout(function() {
+          preloader.fadeOut(preloaderFadeOutTime);
+        }, 800);
+      }
+      hidePreloader();
+      //   var preloader = $('.loader-background');
+      // preloader.style.display = 'none';
     });
 });
 
@@ -135,3 +150,11 @@ openPopupButtons.forEach(button => {
     popup.classList.remove('popup__active');
     popupOverlay.classList.remove('popup__active');
   }
+
+
+
+// /* Preloader */
+// $(function () {
+
+
+// });
