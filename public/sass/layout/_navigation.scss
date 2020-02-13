@@ -192,11 +192,11 @@
 
     &__item {
         &:nth-child(odd) {
-        animation: up 1s forwards 1000ms;
+            animation: up 1s forwards;
         }
 
         &:nth-child(even) {
-            animation: down 1s forwards 1000ms;
+            animation: down 1s forwards;
         }
 
         &::nth-child(n) {

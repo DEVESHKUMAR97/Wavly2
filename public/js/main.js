@@ -1,3 +1,4 @@
+
 // 1. scrolling navigation effect and preloader
 $(function () {
     $(window).on("scroll load", function () {
@@ -20,6 +21,11 @@ $(function () {
       hidePreloader();
       //   var preloader = $('.loader-background');
       // preloader.style.display = 'none';
+    });
+
+    $(document).ready(function() {
+      $(".heading-primary--main").addClass("main-animation"); 
+      $(".heading-primary--sub").addClass("sub-animation"); 
     });
 });
 
@@ -153,8 +159,6 @@ openPopupButtons.forEach(button => {
 
 
 
-// /* Preloader */
-// $(function () {
 
 
-// });
+  
