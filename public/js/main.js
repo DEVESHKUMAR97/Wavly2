@@ -9,24 +9,24 @@ $(function () {
     });
 
 
-    // preloader
-    $(window).on('load', function() {
-      var preloaderFadeOutTime = 100;
-      function hidePreloader() {
-        var preloader = $('.loader-background');
-        setTimeout(function() {
-          preloader.fadeOut(preloaderFadeOutTime);
-        }, 800);
-      }
-      hidePreloader();
-      //   var preloader = $('.loader-background');
-      // preloader.style.display = 'none';
-    });
+    // // preloader
+    // $(window).on('load', function() {
+    //   var preloaderFadeOutTime = 100;
+    //   function hidePreloader() {
+    //     var preloader = $('.loader-background');
+    //     setTimeout(function() {
+    //       preloader.fadeOut(preloaderFadeOutTime);
+    //     }, 800);
+    //   }
+    //   hidePreloader();
+    //   //   var preloader = $('.loader-background');
+    //   // preloader.style.display = 'none';
+    // });
 
-    $(document).ready(function() {
-      $(".heading-primary--main").addClass("main-animation"); 
-      $(".heading-primary--sub").addClass("sub-animation"); 
-    });
+    // $(document).ready(function() {
+    //   $(".heading-primary--main").addClass("main-animation"); 
+    //   $(".heading-primary--sub").addClass("sub-animation"); 
+    // });
 });
 
 

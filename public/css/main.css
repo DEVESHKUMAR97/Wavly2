@@ -323,10 +323,14 @@ body {
   margin-bottom: 1.2rem;
   margin-left: 5rem;
   text-shadow: 0 0.7rem 2rem black;
+  -webkit-animation: moveInLeft 1s ease-out .1s 1;
+          animation: moveInLeft 1s ease-out .1s 1;
 }
 
 @media (max-width: 48em) {
   .heading-primary--main {
+    -webkit-animation: moveInLeftSmall 1s ease-out .1s 1;
+            animation: moveInLeftSmall 1s ease-out .1s 1;
     letter-spacing: 3rem;
     margin-left: 3rem;
     text-shadow: 0 0.5rem 5rem black;
@@ -350,6 +354,8 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: #fff;
+  -webkit-animation: moveInRight 1s ease-out .1s 1;
+          animation: moveInRight 1s ease-out .1s 1;
   margin-bottom: 4rem;
   line-height: 1.7;
   letter-spacing: .25rem;
@@ -418,30 +424,6 @@ body {
 
 .paragraph:not(:last-child) {
   margin-bottom: 3rem;
-}
-
-.main-animation {
-  -webkit-animation: moveInLeft 1s ease-out 900ms 1;
-          animation: moveInLeft 1s ease-out 900ms 1;
-}
-
-@media (max-width: 48em) {
-  .main-animation {
-    -webkit-animation: moveInLeftSmall 1s ease-out 900ms 1;
-            animation: moveInLeftSmall 1s ease-out 900ms 1;
-  }
-}
-
-.sub-animation {
-  -webkit-animation: moveInRight 1s ease-out 900ms 1;
-          animation: moveInRight 1s ease-out 900ms 1;
-}
-
-@media (max-width: 48em) {
-  .sub-animation {
-    -webkit-animation: moveInRightSmall 1s ease-out 900ms 1;
-            animation: moveInRightSmall 1s ease-out 900ms 1;
-  }
 }
 
 .u-center-text {
