@@ -30,7 +30,7 @@ app.use(flash());
 // generalising port and ip address
 var port = process.env.PORT;
 if(port == undefined){
-  port=3000;
+  port=80;
 }
 
 var ip=process.env.IP;
@@ -96,8 +96,10 @@ app.post('/contact_request', function(req, res){
     // send mail with defined transport object
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
+            console.log(error);
             req.flash('errorMessage', "Internal Error!!!");
         } else {
+            console.log("Message has been sent!!!");
             req.flash('infoMessage',"Message has been sent!!!");
         }
         res.redirect('/#contact');
@@ -152,8 +154,10 @@ app.post('/partner_request', function(req, res){
     // send mail with defined transport object
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
+            console.log(error);
             req.flash('errorMessage', "Internal Error!!!");
         } else {
+            console.log("Form has been submitted!!!");
             req.flash('infoMessage',"Form has been submitted!!!");
         }
         res.redirect('/partner');
