@@ -158,7 +158,21 @@ openPopupButtons.forEach(button => {
   }
 
 
+// 8. checkbox check on partner form
+  function checkFormData() {
 
+    
+    if (!$('input[name=partner_type]:checked').length > 0) {
+      //  document.getElementById("errMessage").innerHTML = "Check Box 1 can not be null";
+          document.getElementById('radio-error').style.color = "#ff7730";
+       return false;
+    }
 
+    if (!$('input[name=partner_interested]:checked').length > 0) {
+    //  document.getElementById("errMessage").innerHTML = "Check Box 1 can not be null";
+        document.getElementById('checkbox-error').style.color = "#ff7730";
+     return false;
+    }
 
-  
+    return true;
+   }

@@ -38,7 +38,7 @@
                             <div class="col-12">
                                 <div class="partner-form-background">
                                     <div class="partner-form-background__area">
-                                        <form action="partner_request" method="POST" class="partner-form" autocomplete="off">
+                                        <form action="partner_request" method="POST" class="partner-form" autocomplete="off" onsubmit="return checkFormData()">
 
                                             <div class="u-margin-bottom-medium">
                                                 <h3 class="heading-tertiary u-center-text">
@@ -61,10 +61,10 @@
 
                                             <fieldset>
                                                 <div class="partner-form__group partner-form__group--radio-three">
-                                                    <legend class="partner-form__label">You are* :</legend>
+                                                    <legend class="partner-form__label" id="radio-error">You are* :</legend>
                                                     <div class="partner-form__radio-input-group">
                                                         <div class="partner-form__radio-group partner-form__radio-group--radio-three">
-                                                            <input type="radio" class="partner-form__radio-input" id="retailer" value="retailer" name="partner_type" required>
+                                                            <input type="radio" class="partner-form__radio-input" id="retailer" value="retailer" name="partner_type">
                                                             <label for="retailer" class="partner-form__radio-label">
                                                                 <span class="partner-form__radio-button"></span>
                                                                 Retailer
@@ -96,7 +96,7 @@
 
                                             <div class="partner-form__group">
                                                 <label for="partner-mobile" class="partner-form__label">Mobile/Contact number* :</label>
-                                                <input type="number" class="partner-form__input" placeholder="Mobile/Contact number*" id="partner-mobile" name="partner_mobile" required>
+                                                <input type="text" class="partner-form__input" placeholder="Mobile/Contact number*" id="partner-mobile" name="partner_mobile"  pattern="[1-9]{1}[0-9]{9}" required>
                                             </div>  
 
                                             <div class="partner-form__group">
@@ -162,10 +162,10 @@
 
                                             <fieldset>
                                                 <div class="partner-form__group partner-form__group--checkbox">
-                                                    <legend class="partner-form__label">Products interested in* :</legend>
+                                                    <legend class="partner-form__label" id="checkbox-error">Products interested in* :</legend>
                                                     <div class="partner-form__checkbox-input-group">
                                                         <div class="partner-form__checkbox-group">
-                                                            <input type="checkbox" class="partner-form__checkbox-input" id="wavlyautocut" value="wavlyautocut" name="partner_interested" required="required">
+                                                            <input type="checkbox" class="partner-form__checkbox-input" id="wavlyautocut" value="wavlyautocut" name="partner_interested">
                                                             <label for="wavlyautocut" class="partner-form__checkbox-label">
                                                                 <span class="partner-form__checkbox-button"></span>
                                                                 Wavly AutoCut
@@ -173,7 +173,7 @@
                                                         </div>
                     
                                                         <div class="partner-form__checkbox-group">
-                                                            <input type="checkbox" class="partner-form__checkbox-input" id="wavlysubmersible" value="wavlysubmersible" name="partner_interested" required="required">
+                                                            <input type="checkbox" class="partner-form__checkbox-input" id="wavlysubmersible" value="wavlysubmersible" name="partner_interested">
                                                             <label for="wavlysubmersible" class="partner-form__checkbox-label">
                                                                 <span class="partner-form__checkbox-button"></span>
                                                                 Wavly Submersible
@@ -181,7 +181,7 @@
                                                         </div>
 
                                                         <div class="partner-form__checkbox-group">
-                                                            <input type="checkbox" class="partner-form__checkbox-input" id="wavlyx" value="wavlyx" name="partner_interested" required="required">
+                                                            <input type="checkbox" class="partner-form__checkbox-input" id="wavlyx" value="wavlyx" name="partner_interested">
                                                             <label for="wavlyx" class="partner-form__checkbox-label">
                                                                 <span class="partner-form__checkbox-button"></span>
                                                                 Wavly X
@@ -281,7 +281,7 @@
                                 </div>
                                 <div class="accordion__answer-box">
                                     <p class="accordion__answer">
-                                        The return on investment is about 21 – 28 %  per peice.
+                                        The return on investment is about 21 – 28 %  per piece.
                                     </p>
                                 </div>
                             </div>

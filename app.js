@@ -61,9 +61,9 @@ app.post('/contact_request', function(req, res){
         <p>You have a new contact request.</p>
         <h3>Contact Details :</h3>
         <ul>  
-        <li><strong>Name :</strong> ${req.body.contact_name}</li>
-        <li><strong>Email :</strong> ${req.body.contact_email}</li>
-        <li><strong>Phone :</strong> ${req.body.contact_number}</li>
+        <li><strong>Name* :</strong> ${req.body.contact_name}</li>
+        <li><strong>Email* :</strong> ${req.body.contact_email}</li>
+        <li><strong>Mobile Number :</strong> ${req.body.contact_number}</li>
         </ul>
         <h3>Message :</h3>
         <p>${req.body.contact_message}</p>
@@ -88,7 +88,7 @@ app.post('/contact_request', function(req, res){
     // setup email data with unicode symbols
     let mailOptions = {
         from: 'wavlywater@gmail.com', // sender address
-        to: ['deveshkumarkblock@gmail.com', 'jdp02041997@gmail.com', 'jatinkr.sai@gmail.com'], // list of receivers
+        to: ['jatinkr.sai@gmail.com', 'ravi.varya@gmail.com'], // list of receivers
         subject: 'Wavly Contact Request', // Subject line
         html: output // html body
     };
@@ -112,15 +112,15 @@ app.post('/partner_request', function(req, res){
         <p>You have a new Partner request.</p>
         <h3>Partner Details :</h3>
         <ul>  
-        <li><strong>Partner Name :</strong> ${req.body.partner_name}</li>
-        <li><strong>Partner Type :</strong> ${req.body.partner_type}</li>
-        <li><strong>Partner Company Name :</strong> ${req.body.partner_company_name}</li>
-        <li><strong>Partner Mobile :</strong> ${req.body.partner_mobile}</li>
-        <li><strong>Partner Email :</strong> ${req.body.partner_email}</li>
+        <li><strong>Partner Name* :</strong> ${req.body.partner_name}</li>
+        <li><strong>Partner Type* :</strong> ${req.body.partner_type}</li>
+        <li><strong>Partner Company Name* :</strong> ${req.body.partner_company_name}</li>
+        <li><strong>Partner Mobile* :</strong> ${req.body.partner_mobile}</li>
+        <li><strong>Partner Email* :</strong> ${req.body.partner_email}</li>
         <li><strong>Partner Website :</strong> ${req.body.partner_web_name}</li>
         <li><strong>Company has gst :</strong> ${req.body.partner_has_gst}</li>
         <li><strong>If owns shop :</strong> ${req.body.partner_owner}</li>
-        <li><strong>Products interested in :</strong> ${req.body.partner_interested}</li>
+        <li><strong>Products interested in* :</strong> ${req.body.partner_interested}</li>
         <li><strong>Partner Team Size :</strong> ${req.body.partner_team_size}</li>
         </ul>
         <h3>Message :</h3>
@@ -146,7 +146,7 @@ app.post('/partner_request', function(req, res){
     // setup email data with unicode symbols
     let mailOptions = {
         from: 'wavlywater@gmail.com', // sender address
-        to: ['deveshkumarkblock@gmail.com', 'jdp02041997@gmail.com', 'jatinkr.sai@gmail.com'], // list of receivers
+        to: ['jatinkr.sai@gmail.com', 'ravi.varya@gmail.com'], // list of receivers
         subject: 'Become Partner Request', // Subject line
         html: output // html body
     };

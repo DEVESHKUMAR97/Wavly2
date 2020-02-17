@@ -1,225 +1,3 @@
-// .card  {
-//     // Fuctionality
-//     position: relative;
-//     height: $card-height;
-//     border: 0;
-//     border-radius: 4px;
-//     width: 90%;
-//     margin: 0 auto;
-//     // overflow: hidden;
-
-
-//     &__side {
-//         height: $card-height;
-//         transition: all .8s ease;
-//         position: absolute;
-//         bottom: 0;
-//         left: 0;
-//         width: 100%;
-//         backface-visibility: hidden;
-//         border: 0;
-//         border-radius: 4px;
-//         overflow: hidden;
-//         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
-
-//         &--front {
-//             background-color: $color-white;
-//             z-index: 5;
-//         }
-
-//         &--back {
-//             // background-color: orange;
-//             // z-index: 6;
-//             height: $back-side-height;
-//             // position: absolute;
-//             // bottom: 0;
-//             // left: 0;
-
-//             &--1 {
-//                 background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85));
-//             }
-    
-//             &--2 {
-//                 background-image: linear-gradient(to right bottom, rgba($color-primary-light, .85), rgba($color-primary-dark, .85));
-//             }
-    
-//             &--3 {
-//                 background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .85), rgba($color-tertiary-dark, .85));
-//             }
-//         }
-//     }
-
-//     &:hover &__side--front {
-//         transform: translateY(calc(-1 * #{$card-shift}));
-//         border-bottom-left-radius: 0;
-//         border-bottom-right-radius: 0;
-//     }
-
-//     &:hover &__side--back {
-//         transform: translateY($card-shift);
-//         border-top-left-radius: 0;
-//         border-top-right-radius: 0;
-//     }
-
-
-//     // card front style
-
-//     &__picture {
-//         height: 100%;
-//         background-size: cover;
-//         background-position: center;
-//         // background-blend-mode: screen;
-
-//         &--1 {
-//             background-image:url(../images/autobackcrop.png);
-//         }
-
-//         &--2 {
-//             background-image: url(../images/subbackcrop.png);
-//         }
-
-//         &--3 {
-//             background-image: url(../images/coming.webp);
-//         }
-//     }
-
-//     &__heading {
-//         font-size: 2.8rem;
-//         font-weight: 300;
-//         text-transform: uppercase;
-//         text-align: right;
-//         color: $color-white;
-//         position: absolute;
-//         top: 3rem;
-//         right: 2rem;
-//         width: 65%;
-//     }
-
-//     &__heading-span {
-//         padding: .2rem 1rem;
-//         -webkit-box-decoration-break: clone;
-//         box-decoration-break: clone;
-
-//         &--1 {
-//             background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85));
-//         }
-
-//         &--2 {
-//             background-image: linear-gradient(to right bottom, rgba($color-primary-light, .85), rgba($color-primary-dark, .85));
-//         }
-
-//         &--3 {
-//             background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .85), rgba($color-tertiary-dark, .85));
-//         }
-//     }
-
-//     // back styling
-//     &__details {
-//         width: 85%;
-//         // background-color: red;
-//         margin: 3rem auto;
-//     }
-
-//     &__paragraph {
-//         font-size: $default-font-size;
-//         font-weight: 400;
-//         color: $color-white;
-//     }
-
-//     &__button-section {
-//         width: 85%;
-//         margin: 3rem auto;
-//         // background-color: red;
-//         position: absolute;
-//         bottom: .1rem;
-//         left: 7.5%;
-//         right: 7.5%;
-//         display: flex;
-//         justify-content: space-between;
-//     }
-
-//     &__button {
-//         &:link, &:visited {
-//             display: inline-block;
-//             margin: 0;
-//             padding: .5rem 1rem;
-//             border: 1px solid $color-white;
-//             font-size: 1.6rem;
-//             font-weight: 400;
-//             color: $color-white;
-//             border-radius: 3px;
-//             text-decoration: none;
-//             transition: all .2s;
-//         }
-
-//         &:hover, &:active {
-//             background-color: $color-white;
-//         }   
-                    
-//         &--1:hover, &--1:active {
-//             color : $color-secondary-dark;     
-//         }
-
-//         &--2:hover, &--2:active {
-//             color : $color-primary-dark;     
-//         }
-
-//         &--3:hover, &--3:active {
-//             color : $color-tertiary-dark;     
-//         }
-//     }
-
-//     @include respond(big-tab) {
-//         width: 100%;
-//         &__heading {
-//             width: 70%;
-//         }
-//     }
-
-//     @include respond(tab-land) {
-//         width: 50%;
-//         height: auto;
-//         margin-bottom: 3rem;
-//         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
-
-//         &__side {
-//             position: relative;
-//             box-shadow: none;
-
-//             &--front {
-//                 border-bottom-left-radius: 0;
-//                 border-bottom-right-radius: 0;
-//             }
-
-//             &--back {
-//                 border-top-left-radius: 0;
-//                 border-top-right-radius: 0;
-//             }
-//         }
-
-//         &:hover &__side--front {
-//             transform: none;
-//         }
-    
-//         &:hover &__side--back {
-//             transform: none;
-//         }
-
-//         &__picture{
-//             background-position: top;
-//         }
-        
-//     }
-
-//     @include respond(tab-port){
-//         width: 70%;
-//     }
-
-//     @include respond(phone){
-//         width: 65%;
-//     }
-// }
-
 .card-n {
 
     // Functionality
@@ -282,11 +60,11 @@
         border-top-right-radius: 3px;
 
         &--1 {
-            background-image: url(../images/autoback.png);
+            background-image: url(../images/autoback.jpg);
         }
 
         &--2 {
-            background-image: url(../images/subback.png);
+            background-image: url(../images/subback.jpg);
         }
 
         &--3 {
@@ -373,7 +151,9 @@
     }
 
 
-    @include respond(tab-port) {
+    // @include respond(tab-port) {
+    @media only screen and (max-width: 48em),
+        only screen and (hover:none) { 
         height: auto;
         border-radius: 3px;
         background-color: $color-white;

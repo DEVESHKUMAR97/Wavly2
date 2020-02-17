@@ -1,11 +1,6 @@
 .section-features {
     padding: 10rem 0;
-    // background: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8));
-    // background-image: linear-gradient(to right top, #1b1c1c, #2b4040, #386868, #439392, #4cc0bd, #4bcfca, #49ded7, #47ede4, #3bdfd6, #2ed2c8, #1ec4ba, #05b7ac);
-    // background: linear-gradient(to top, #093637, #44A08D);
-    // background: linear-gradient(to bottom, #92acbc, #507687);
     background: linear-gradient(to bottom, #35899a, #35899a);
-    // background-color: rgba($color: #3e7681, $alpha: 1);
 
     @include respond(tab-port) {
         padding: 10rem 0;
@@ -22,7 +17,6 @@
 
 .section-contact {
     padding: 10rem 0;
-    // background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
     background: linear-gradient(to bottom, #35899a, #35899a);
 
 

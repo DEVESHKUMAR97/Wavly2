@@ -54,7 +54,7 @@
     width: 100%;
 }
 
-@media (max-width: 36em) {
+@media only screen and (max-width: 36em) {
   .association {
     font-size: 1.8rem;
   }

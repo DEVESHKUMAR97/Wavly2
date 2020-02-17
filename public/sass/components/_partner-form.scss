@@ -12,6 +12,10 @@
 
     &__group:not(:last-child) {
         margin-bottom: 1.2rem;
+
+        @include respond(phone) {
+            margin-bottom: 0;
+        }
     }
 
     &__input {
@@ -40,11 +44,11 @@
         }
 
         @include respond(phone) {
-            width: 90%;
+            width: 95%;
             margin-bottom: 1rem;
             margin-top: .2rem;
-            margin-left: 5%;
-            margin-right: 5%;
+            margin-left: 2.5%;
+            margin-right: 2.5%;
         }
 
         &:focus {
@@ -98,9 +102,9 @@
         }
 
         @include respond(phone) {
-            width: 90%;
-            margin-left: 5%;
-            margin-right: 5%;
+            width: 95%;
+            margin-left: 2.5%;
+            margin-right: 2.5%;
         }
     }
 
@@ -129,11 +133,11 @@
         }
 
         @include respond(phone) {
-            width: 90%;
-            margin-bottom: 1rem;
+            width: 95%;
+            margin-bottom: 0;
             margin-top: .2rem;
-            margin-left: 5%;
-            margin-right: 5%;
+            margin-left: 2.5%;
+            margin-right: 2.5%;
         }
     }
 
@@ -156,11 +160,11 @@
         }
 
         @include respond(phone) {
-            width: 90%;
-            margin-bottom: 1rem;
+            width: 95%;
+            margin-bottom: 0;
             margin-top: .2rem;
-            margin-left: 5%;
-            margin-right: 5%;
+            margin-left: 2.5%;
+            margin-right: 2.5%;
         }
     }
 
