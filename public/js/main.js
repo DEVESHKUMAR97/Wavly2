@@ -176,3 +176,9 @@ openPopupButtons.forEach(button => {
 
     return true;
    }
+
+
+
+   if (!("ontouchstart" in document.documentElement)) {
+    document.documentElement.className += " no-touch";
+    }
